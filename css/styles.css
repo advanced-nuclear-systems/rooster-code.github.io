@@ -260,19 +260,19 @@ pre {
   display: block;
   margin-top: 0;
   margin-bottom: 1rem;
-  overflow: auto;
+  overflow: visible;
   font-size: 0.875em;
 }
 pre code {
   font-size: inherit;
-  color: inherit;
+  color: rgba(0, 0, 0);
   word-break: normal;
 }
 
 code {
   font-size: 0.875em;
-  color: #d63384;
-  word-wrap: break-word;
+  color: rgba(0, 0, 0);
+  white-space: nowrap;
 }
 a > code {
   color: inherit;

@@ -36,7 +36,7 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                             <li class="nav-item"><a class="nav-link" href="rooster.html">About</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Input</a></li>
+                            <li class="nav-item"><a class="nav-link" href="rooster-i.html">Input</a></li>
                             <li class="nav-item"><a class="nav-link" href="#">Theory</a></li>
                             <li class="nav-item"><a class="nav-link" href="#">Examples</a></li>
                             <li class="nav-item"><a class="nav-link" href="https://github.com/armstrong-dev/rooster">Github</a></li>
@@ -51,13 +51,19 @@
                         <div class="col-lg-8 col-xl-7 col-xxl-6">
                             <div class="my-5 text-center text-xl-start">
                                 <h1 class="display-5 fw-bolder text-dark mb-2">About</h1>
-                                <p class="lead fw-normal text-black-50 mb-4">Robust Object Oriented Solver of Transport Equations in a Reactor.</p>
-                                <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
-                                    <a class="btn btn-primary btn-lg px-4 me-sm-3" href="#">Input</a>
-                                    <a class="btn btn-primary btn-lg px-4 me-sm-3" href="#">Theory</a>
-                                    <a class="btn btn-primary btn-lg px-4 me-sm-3" href="#">Examples</a>
-                                    <a class="btn btn-primary btn-lg px-4 me-sm-3" href="https://github.com/armstrong-dev/rooster">Github</a>
+                                <p class="lead fw-normal text-black-50 mb-4">ROOSTER stands for Robust Object Oriented Solver of Transport Equations in a Reactor.</p>
+                                <p class="lead fw-normal text-black-50 mb-4">The code has been developed since early 2021 as a platform for accumulating and disseminating experience in the field of a Sodium Fast Reactor.</p>
+                                <div class="lead fw-normal text-black-50 mb-4">ROOSTER
+                                   <ul>
+                                      <li>is open source, multiphysics and object-oriented;</li>
+                                      <li>is written in Python 3 with Fortran 2009 math kernels;</li>
+                                      <li>aims at exceptional transparency and readability to facilitate both contributing from experts and understanding for new users;</li>
+                                      <li>uses composable architecture by class instantiation and customisation inheritance;</li>
+                                      <li>applies threading and MPI for multi-processor multiple-node execution; and</li>
+                                      <li>relies on a structured mesh allowing an acceleration compared to unstructured meshes due to easy identification of elements and nodes.</li>
+                                   </ul>
                                 </div>
+                                <p class="lead fw-normal text-black-50 mb-4">The structured mesh feature makes a main difference of ROOSTER from other modern multi-physics nuclear reactor modeling tools, which usually use unstructured meshes.</p>
                             </div>
                         </div>
                     </div>
