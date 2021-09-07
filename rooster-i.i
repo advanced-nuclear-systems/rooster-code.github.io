@@ -8,7 +8,7 @@
 <div class="lead">
 The input file should have name <code>input</code>. 
 It consists of lines (cards) identified by keywords. 
-The card are presented below by examples in alphabetical order of the keywords. 
+The cards are presented below by examples in alphabetical order of the keywords. 
 All numerical values and upper-case words are specified by users. 
 The low-case words are keywords and should not be changed.
 The colour code indicates the class to which the card "belongs": <code style='background-color:#ccfdcc;'>Control</code>, <code style='background-color:#cdeefd;'>Fluid</code>, <code style='background-color:#fadadd;'>Core</code> and <code style='background-color:#ccc;'>Solid</code>.
