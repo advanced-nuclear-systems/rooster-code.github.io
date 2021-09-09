@@ -5,11 +5,6 @@ f = open('template', mode = 'r')
 t0 = f.read()
 f.close()
 
-#read template-r
-f = open('template-r', mode = 'r')
-tr = f.read()
-f.close()
-
 #split
 t1 = t0.split('INSERTHERE')
 
@@ -22,8 +17,5 @@ for f_name in os.listdir('.'):
         f.close()
         #write fname.html
         f = open(fname+'.html', mode = 'w')
-        if fname[0:7] == 'rooster':
-            f.write(t1[0] + tr + i0 + t1[1])
-        else:
-            f.write(t1[0] + i0 + t1[1])
+        f.write(t1[0] + i0 + t1[1])
         f.close()

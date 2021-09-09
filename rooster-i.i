@@ -3,10 +3,11 @@
                 <div class="container px-5">
                     <div class="row gx-5 align-items-center justify-content-center">
                         <div class="col-lg-8 col-xl-7 col-xxl-6">
+                            <div class="breadcrumb"><a href="index.html">ARMSTRONG</a>&nbsp;:&nbsp;<a href="index.html#rooster">ROOSTER</a>&nbsp;:&nbsp;Input<div>
                             <div class="my-5 text-xl-start">
                                 <h1 class="display-5 fw-bolder text-dark mb-2">Input description</h1>
 <div class="lead">
-The input file should have name <code>input</code>. 
+The ROOSTER input file should have name <code>input</code>. 
 It consists of lines (cards) identified by keywords. 
 The cards are presented below by examples in alphabetical order of the keywords. 
 All numerical values and upper-case words are specified by users. 
