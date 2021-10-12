@@ -38,7 +38,14 @@ function render_record(obj,json)
                } 
                catch (_) 
                {
-                  d.innerHTML += '<div class="offset-1">' + e[key2] + '</div>';
+                  if(e[key2].length == 32)
+                  {
+                     d.innerHTML += '<div class="offset-1"><a href="db-record.html?id=' + e[key2] + '">' + e[key2] + '</a></div>';
+                  }
+                  else
+                  {
+                     d.innerHTML += '<div class="offset-1">' + e[key2] + '</div>';
+                  }
                }
             }
             d.innerHTML += '</br>';
@@ -49,6 +56,4 @@ function render_record(obj,json)
          d.innerHTML += '<div>' + obj[key] + '</div><br>';
       }
    }
-   
-   console.log(obj)
 }
