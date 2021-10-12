@@ -439,8 +439,8 @@ The colour code indicates the class to which the card "belongs": <code style='ba
 <pre style='margin:0;'>#####     model</pre>
 <pre style='margin:0;'>solve     pointkinetics</pre>
 <code style='white-space:nowrap;'>#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----</code><br>
-<pre style='margin:0;'>#####     model               ng</pre>
-<pre style='margin:0;'>solve     spatialkinetics     25</pre>
+<pre style='margin:0;'>#####     model               ng         meth</pre>
+<pre style='margin:0;'>solve     spatialkinetics     25         DIF</pre>
 <br>
 <div><code>model</code>: keyword of the model to be solved:</div>
 <div style='margin:0 0 0 20px'>
@@ -450,7 +450,10 @@ The colour code indicates the class to which the card "belongs": <code style='ba
    <div><code>pointkinetics</code> : point reactor kinetics model;</div>
    <div><code>spatialkinetics</code> : spatial reactor kinetics model;</div>
    <div style='margin:0 0 0 20px'>
-      <div><code>ng</code> : number of energy groups.</div>
+      <div><code>ng</code> : number of energy groups;</div>
+      <div><code>meth</code> : method used by an eigenvalue solver:</div>
+          <div style='margin:0 0 0 40px'><code>DIF</code> : neutron diffusion method;</div>
+          <div style='margin:0 0 0 40px'><code>MC</code> : Monte Carlo method.</div>
    </div>
 </div>
 <br>
