@@ -110,7 +110,7 @@ The colour code indicates the class to which the card "belongs": <code style='ba
 <code style='white-space:nowrap;'>#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----</code><br>
 <code># Fuel rod axial levels</code><br>
 <code style='white-space:nowrap;'>#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----</code><br>
-<pre style='margin:0;'>#####     id        fuelid    hgap      cladid    p2d       mltpl     pipeid    pipenodeid</pre>
+<pre style='margin:0;'>#####     id        fuelid    hgap      cladid    p2d       mltpl     pipeid    pipenode</pre>
 <pre style='margin:0;'>fuelrod   FR01      F01       0         C01       1.02      10        UP1       2</pre>
 <pre style='margin:0;'>fuelrod   FR01      F01       0         C01       1.02      10        UP1       3</pre>
 <pre style='margin:0;'>fuelrod   FR01      F01       0         C01       1.02      10        UP1       4</pre>
@@ -128,7 +128,24 @@ The colour code indicates the class to which the card "belongs": <code style='ba
 <div><code>p2d</code> : pitch-to-diameter ratio of the fuel rod lattice; </div>
 <div><code>mltpl</code> : multiplicity of the heat exchange surface (actual number of fuel rods simulated by one).</div>
 <div><code>pipeid</code> : thermal-hydraulic pipe id defined in the <code>pipe</code> card;</div>
-<div><code>pipenodeid</code> : index of the node inside the thermal-hydraulic pipe coupled to the current fuel rod level.</div>
+<div><code>pipenode</code> : index of the node inside the thermal-hydraulic pipe coupled to the current fuel rod level.</div>
+<br>
+<!------------------------------------------------------------------------------------------------>
+<div style='background-color:#ccc; border-top:1px solid black; font-size:20px; font-weight:bold'><code>htstr</code> : Heat structure</div>
+<code style='white-space:nowrap;'>#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----</code><br>
+<code># Heat structure</code><br>
+<code style='white-space:nowrap;'>#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----</code><br>
+<pre style='margin:0;'>#####     id        matid     ri(m)     ro(m)     nr        bcleft    bcright   mltpl</pre>
+<pre style='margin:0;'>htstr     HS01      SS1       1e-2      1.1e-2    3         BC01      BC02      10</pre>
+<br>
+<div><code>id</code> :  user-defined id of heat structure to which the axial layer belongs;</div>
+<div><code>matid</code> : user-defined heat structure material id (should appear in the <code>mat</code> card);</div>
+<div><code>ri</code> : inner radius of heat structure (m);</div>
+<div><code>ro</code> : outer radius of heat structure (m); </div>
+<div><code>nr</code> : number of radial nodes;</div>
+<div><code>bcleft</code> : user-defined boundary condition id for the inner surface of the heat structure (should appear in the <code>thermbc</code> card);</div>
+<div><code>bcright</code> : user-defined boundary condition id for the outer surface of the heat structure (should appear in the <code>thermbc</code> card);</div>
+<div><code>mltpl</code> : multiplicity of the heat exchange surface (actual number of heat structures simulated by one).</div>
 <br>
 <!------------------------------------------------------------------------------------------------>
 <div style='background-color:#ccc; border-top:1px solid black; font-size:20px; font-weight:bold'><code>innergas</code> : Fuel rod inner gas</div>
@@ -464,7 +481,7 @@ The colour code indicates the class to which the card "belongs": <code style='ba
 <code style='white-space:nowrap;'>#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----</code><br>
 <code># Stack of mixes: fissile subassembly of inner zone</code><br>
 <code style='white-space:nowrap;'>#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----</code>
-<pre style='margin:0;'>#####     id        mixid     pipeid    pipenodeid</pre>
+<pre style='margin:0;'>#####     id        mixid     pipeid    pipenode</pre>
 <pre style='margin:0;'>stack     FIN       PLUG1     UP01      1 </pre>
 <pre style='margin:0;'>stack     FIN       GASPLE1   UP02      1 </pre>
 <pre style='margin:0;'>stack     FIN       GASPLE1   UP02      2 </pre>
@@ -529,7 +546,7 @@ The colour code indicates the class to which the card "belongs": <code style='ba
 <div><code>id</code>: user-defined id of the vertical stack of homogeneous mixes;</div>
 <div><code>mixid</code>: user-defined id of the homogeneous mix of isotopes filling the node if the stack <code>id</code> (should appear in the <code>mix</code> card);</div>
 <div><code>pipeid</code>: user-defined id of the pipe (should appear in the <code>pipe</code> card);</div>
-<div><code>pipenodeid</code>: id of the node number of the pipe <code>pipeid</code> defining the node of the stack <code>id</code>.</div><br>
+<div><code>pipenode</code>: index of the node inside the thermal-hydraulic pipe defining the node of the stack <code>id</code>.</div><br>
 <div>Note: the stack represents a subassembly of the core. The axial nodalization of the stack is defined by linking every node of the stack with a pipe node.</div>
 <br>
 <!------------------------------------------------------------------------------------------------>
@@ -562,9 +579,53 @@ The colour code indicates the class to which the card "belongs": <code style='ba
 <code># Prompt neutron lifetime</code><br>
 <code style='white-space:nowrap;'>#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----</code>
 <pre style='margin:0;'>#####     tlife(s)</pre>
-<pre style='margin:0;'>tlife     0.0005</pre><br>
+<pre style='margin:0;'>tlife     0.0005</pre>
 <br>
 <div><code>tlife</code>: prompt neutron lifetime (s).</div>
+<br>
+<!------------------------------------------------------------------------------------------------>
+<div style='background-color:#cdeefd; border-top:1px solid black; font-size:20px; font-weight:bold'><code>thermbc</code> : Thermal boundary conditions</div>
+<code style='white-space:nowrap;'>#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----</code><br>
+<code># Thermal boundary conditions</code><br>
+<code style='white-space:nowrap;'>#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----</code>
+<pre style='margin:0;'>#####     id        type      qf</pre>
+<pre style='margin:0;'>thermbc   BC01      0         0</pre>
+<code style='white-space:nowrap;'>#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----</code><br>
+<pre style='margin:0;'>#####     id        type      alfa      temp</pre>
+<pre style='margin:0;'>thermbc   BC02      1         1e4       293</pre>
+<code style='white-space:nowrap;'>#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----</code><br>
+<pre style='margin:0;'>#####     id        type      pipeid    pipenode</pre>
+<pre style='margin:0;'>thermbc   BC03      2         UP1       1</pre>
+<br>
+<div><code>id</code> : user-defined boundary condition id (used in the <code>htstr</code> card);</div>
+<div><code>type</code> : flag of boundary condition type;</div>
+<div style='margin:0 0 0 20px'>
+   <div><code>0</code>: constant heat flux from the heat structure surface assumed</div>
+   <div style='margin:0 0 0 20px'>
+      <div><code>qf</code>: heat flux (W/m<sup>2</sup>);</div>
+   </div>
+   <div><code>1</code>: heat flux from the heat structure surface defined by heat exchange coefficient and external temperature (both constant)</div>
+   <div style='margin:0 0 0 20px'>
+      <div><code>alfa</code>: heat exchange coefficient (W/m<sup>2</sup>K);</div>
+      <div><code>temp</code>: temperature (K);</div>
+   </div>
+   <div><code>2</code>: heat structure surface coupled to the pipe node</div>
+     <div style='margin:0 0 0 20px'>
+        <div><code>pipeid</code> : thermal-hydraulic pipe id defined in the <code>pipe</code> card;</div>
+        <div><code>pipenode</code> : index of the node inside the thermal-hydraulic pipe coupled to the heat structure.</div>
+     </div>
+</div>
+<br>
+<!------------------------------------------------------------------------------------------------>
+<div style='background-color:#ccfdcc; border-top:1px solid black; font-size:20px; font-weight:bold'><code>tol</code> : Required solution tolerance</div>
+<code style='white-space:nowrap;'>#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----</code><br>
+<code># Required solution tolerance</code><br>
+<code style='white-space:nowrap;'>#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----</code>
+<pre style='margin:0;'>#####     rtol      atol</pre>
+<pre style='margin:0;'>tol       1e-6      1e-4</pre>
+<br>
+<div><code>rtol</code>: relative tolerance;</div>
+<div><code>atol</code>: absolute tolerance.</div>
 <br>
                             </div>
                         </div>
