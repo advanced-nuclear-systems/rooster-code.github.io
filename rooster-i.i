@@ -110,16 +110,16 @@ The colour code indicates the class to which the card "belongs": <code style='ba
 <code style='white-space:nowrap;'>#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----</code><br>
 <code># Fuel rod axial levels</code><br>
 <code style='white-space:nowrap;'>#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----</code><br>
-<pre style='margin:0;'>#####     id        fuelid    hgap      cladid    p2d       mltpl     pipeid    pipenode</pre>
-<pre style='margin:0;'>fuelrod   FR01      F01       0         C01       1.02      10        UP1       2</pre>
-<pre style='margin:0;'>fuelrod   FR01      F01       0         C01       1.02      10        UP1       3</pre>
-<pre style='margin:0;'>fuelrod   FR01      F01       0         C01       1.02      10        UP1       4</pre>
-<pre style='margin:0;'>fuelrod   FR01      F01       0         C01       1.02      10        UP1       5</pre>
+<pre style='margin:0;'>#####     id        fuelid    hgap      cladid    p2d       mltpl     pipeid    pipenode  kr        kz</pre>
+<pre style='margin:0;'>fuelrod   FR01      F01       0         C01       1.02      10        UP1       2         1.0       1.0</pre>
+<pre style='margin:0;'>fuelrod   FR01      F01       0         C01       1.02      10        UP1       3         1.0       1.0</pre>
+<pre style='margin:0;'>fuelrod   FR01      F01       0         C01       1.02      10        UP1       4         1.0       1.0</pre>
+<pre style='margin:0;'>fuelrod   FR01      F01       0         C01       1.02      10        UP1       5         1.0       1.0</pre>
 <pre style='margin:0;'>#</pre>
-<pre style='margin:0;'>fuelrod   FR02      F01       1000      C01       1.02      10        UP2       2</pre>
-<pre style='margin:0;'>fuelrod   FR02      F01       1000      C01       1.02      10        UP2       3</pre>
-<pre style='margin:0;'>fuelrod   FR02      F01       1000      C01       1.02      10        UP2       4</pre>
-<pre style='margin:0;'>fuelrod   FR02      F01       1000      C01       1.02      10        UP2       5</pre>
+<pre style='margin:0;'>fuelrod   FR02      F01       1000      C01       1.02      10        UP2       2         1.0       1.0</pre>
+<pre style='margin:0;'>fuelrod   FR02      F01       1000      C01       1.02      10        UP2       3         1.0       1.0</pre>
+<pre style='margin:0;'>fuelrod   FR02      F01       1000      C01       1.02      10        UP2       4         1.0       1.0</pre>
+<pre style='margin:0;'>fuelrod   FR02      F01       1000      C01       1.02      10        UP2       5         1.0       1.0</pre>
 <br>
 <div><code>id</code> : user-defined id of fuel rod to which the axial layer belongs;</div>
 <div><code>fuelid</code> : fuel column id defined in <code>fuel</code> card;</div>
@@ -128,7 +128,9 @@ The colour code indicates the class to which the card "belongs": <code style='ba
 <div><code>p2d</code> : pitch-to-diameter ratio of the fuel rod lattice; </div>
 <div><code>mltpl</code> : multiplicity of the heat exchange surface (actual number of fuel rods simulated by one).</div>
 <div><code>pipeid</code> : thermal-hydraulic pipe id defined in the <code>pipe</code> card;</div>
-<div><code>pipenode</code> : index of the node inside the thermal-hydraulic pipe coupled to the current fuel rod level.</div>
+<div><code>pipenode</code> : index of the node inside the thermal-hydraulic pipe coupled to the current fuel rod level;</div>
+<div><code>kr</code> : radial power peaking factor;</div>
+<div><code>kz</code> : axial power peaking factor.</div>
 <br>
 <!------------------------------------------------------------------------------------------------>
 <div style='background-color:#ccc; border-top:1px solid black; font-size:20px; font-weight:bold'><code>htstr</code> : Heat structure</div>
