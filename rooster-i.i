@@ -430,7 +430,12 @@ The colour code indicates the class to which the card "belongs": <code style='ba
 <pre style='margin:0;'>#####     id        value</pre>
 <pre style='margin:0;'>signal    TIME      time</pre>
 <pre style='margin:0;'>signal    PI        3.14159</pre>
-<pre style='margin:0;'>signal    TEMP      600.</pre>
+<pre style='margin:0;'>signal    TEMP      600</pre>
+<pre style='margin:0;'>signal    DCHAN1    dens      CHAN1</pre>
+<pre style='margin:0;'>signal    TCHAN1    temp      CHAN1</pre>
+<pre style='margin:0;'>signal    TDGRD     temp      DGRD</pre>
+<pre style='margin:0;'>signal    TFUEL1    tfuel     FR1</pre>
+<pre style='margin:0;'>signal    TCLAD1    tclad     FR1</pre>
 <br>
 <div><code>id</code>: user-defined signal id;</div>
 <div><code>type</code>: signal value.</div>
@@ -438,7 +443,11 @@ The colour code indicates the class to which the card "belongs": <code style='ba
 <div>Currently available signals (under development):</div>
    <div style='margin:0 0 0 20px'>
    <div><code>3.14159</code>: any constant numeric value;</div>
-   <div><code>time</code>: time of the problem(s).</div>
+   <div><code>time</code>: time of the problem(s);</div>
+   <div><code>dens</code>: average pipe density (kg/m3);</div>
+   <div><code>temp</code>: average pipe or heat structure temperature (K);</div>
+   <div><code>tfuel</code>: fuel rod fuel average temperature (K);</div>
+   <div><code>tclad</code>: fuel rod clad average temperature (K).</div>
 </div>
 <br>
 <!------------------------------------------------------------------------------------------------>
