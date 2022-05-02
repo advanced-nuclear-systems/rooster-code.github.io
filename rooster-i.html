@@ -470,10 +470,14 @@ The colour code indicates the class to which the card "belongs": <code style='ba
 <code style='white-space:nowrap;'>#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----</code><br>
 <code style='white-space:nowrap;'># Signals</code><br>
 <code style='white-space:nowrap;'>#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----</code><br>
-<pre style='margin:0;'>#####     id        value</pre>
-<pre style='margin:0;'>signal    TIME      time</pre>
+<pre style='margin:0;'>#####     id        constant</pre>
 <pre style='margin:0;'>signal    PI        3.14159</pre>
 <pre style='margin:0;'>signal    TEMP      600</pre>
+<pre style='margin:0;'>#####     id        ide</pre>
+<pre style='margin:0;'>signal    TEMP2     TEMP</pre>
+<pre style='margin:0;'>#####     id        keyword</pre>
+<pre style='margin:0;'>signal    TIME      time</pre>
+<pre style='margin:0;'>#####     id        keyword   comp_id</pre>
 <pre style='margin:0;'>signal    DCHAN1    dens      CHAN1</pre>
 <pre style='margin:0;'>signal    TCHAN1    temp      CHAN1</pre>
 <pre style='margin:0;'>signal    TDGRD     temp      DGRD</pre>
@@ -614,18 +618,17 @@ The colour code indicates the class to which the card "belongs": <code style='ba
 <div><code>tinit</code>: integration starting time (s).</div>
 <br>
 <!------------------------------------------------------------------------------------------------>
-<div style='background-color:#ccfdcc; border-top:1px solid black; font-size:20px; font-weight:bold'><code>t_dt</code> : Integration time set</div>
+<div style='background-color:#ccfdcc; border-top:1px solid black; font-size:20px; font-weight:bold'><code>tend</code> : Integration time set</div>
 <code style='white-space:nowrap;'>#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----</code><br>
 <code style='white-space:nowrap;'># Integration time set</code><br>
 <code style='white-space:nowrap;'>#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----</code><br>
-<pre style='margin:0;'>#####     tend(s)   dt(s)</pre>
-<pre style='margin:0;'>t_dt      100       1</pre>
-<pre style='margin:0;'>t_dt      1000      10</pre>
+<pre style='margin:0;'>#####     tend(s)</pre>
+<pre style='margin:0;'>tend      100</pre>
+<pre style='margin:0;'>tend      1000</pre>
 <br>
-<div><code>tend</code>: end of integration time interval (s);</div>
-<div><code>dt</code>: output time step for the current integration interval (s).</div>
+<div><code>tend</code>: end of integration time interval (s).</div>
 <br>
-<div>The given example specifies two integration time intervals: 1) from <code>t0</code> to 100 s with output at every second and 2) from 100 s to 1000 s with output every 10 s.</div>
+<div>The given example specifies two integration time intervals: 1) from <code>t0</code> to 100 s and 2) from 100 s to 1000 s. The time steps inside the itervals are selected automatically by the ODE solver.</div>
 <br>
 <!------------------------------------------------------------------------------------------------>
 <div style='background-color:#fadadd; border-top:1px solid black; font-size:20px; font-weight:bold'><code>tlife</code> : Prompt neutron lifetime</div>
