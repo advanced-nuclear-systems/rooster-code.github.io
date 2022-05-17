@@ -430,8 +430,6 @@ The colour code indicates the class to which the card "belongs": <code style='ba
 <pre style='margin:0;'>#####     id        constant</pre>
 <pre style='margin:0;'>signal    PI        3.14159</pre>
 <pre style='margin:0;'>signal    TEMP      600</pre>
-<pre style='margin:0;'>#####     id        ide</pre>
-<pre style='margin:0;'>signal    TEMP2     TEMP</pre>
 <pre style='margin:0;'>#####     id        keyword</pre>
 <pre style='margin:0;'>signal    TIME      time</pre>
 <pre style='margin:0;'>#####     id        keyword   comp_id</pre>
@@ -585,7 +583,7 @@ The colour code indicates the class to which the card "belongs": <code style='ba
 <br>
 <div><code>tend</code>: end of integration time interval (s).</div>
 <br>
-<div>The given example specifies two integration time intervals: 1) from <code>t0</code> to 100 s and 2) from 100 s to 1000 s. The time steps inside the itervals are selected automatically by the ODE solver.</div>
+<div>The given example specifies two integration time intervals: 1) from <code>t0</code> to 100 s and 2) from 100 s to 1000 s. The time steps inside the intervals are selected automatically by the ODE solver.</div>
 <br>
 <!------------------------------------------------------------------------------------------------>
 <div style='background-color:#fadadd; border-top:1px solid black; font-size:20px; font-weight:bold'><code>tlife</code> : Prompt neutron lifetime</div>
