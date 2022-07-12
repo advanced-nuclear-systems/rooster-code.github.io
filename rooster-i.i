@@ -223,39 +223,6 @@ The colour code indicates the class to which the card "belongs": <code style='ba
 <div>The mass flowrate in the dependent junction could be found from mass flowrates in independent juntions which found by integration of the momentum conservation equations. In case of the independent junction with user-defined pump head, the specifieed signal at the current time step is added to the right-hand side of the momentum conservation equation.</div>
 <br>
 <!------------------------------------------------------------------------------------------------>
-<div style='background-color:#ccfdcc; border-top:1px solid black; font-size:20px; font-weight:bold'><code>lookup</code> : Lookup table control block</div>
-<code style='white-space:nowrap;'>#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----</code><br>
-<code style='white-space:nowrap;'># Lookup table: pump head in junction vs time</code><br>
-<code style='white-space:nowrap;'>#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----</code><br>
-<pre style='margin:0;'>#####     insignal  outsignal</pre>
-<pre style='margin:0;'>lookup    TIME      PMPHEAD_VS_T &</pre>
-<pre style='margin:0;'>          0.0       0 &</pre>
-<pre style='margin:0;'>          10.0      1e5</pre>
-<code style='white-space:nowrap;'>#</code><br>
-<code style='white-space:nowrap;'>#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----</code><br>
-<code style='white-space:nowrap;'># Lookup table: flowrate in junction vs time</code><br>
-<code style='white-space:nowrap;'>#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----</code><br>
-<pre style='margin:0;'>#####     insignal  outsignal</pre>
-<pre style='margin:0;'>lookup    TIME      MDOT_VS_T &</pre>
-<pre style='margin:0;'>          0.0       0 &</pre>
-<pre style='margin:0;'>          10.0      10</pre>
-<code style='white-space:nowrap;'>#</code><br>
-<code style='white-space:nowrap;'>#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----</code><br>
-<code style='white-space:nowrap;'># Lookup table: temperature in pipe node vs time</code><br>
-<code style='white-space:nowrap;'>#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----</code><br>
-<pre style='margin:0;'>#####     insignal  outsignal</pre>
-<pre style='margin:0;'>lookup    TIME      TEMP_VS_T &</pre>
-<pre style='margin:0;'>          0.0       0 &</pre>
-<pre style='margin:0;'>          10.0      700</pre>
-<br>
-<div>The control block is specified by a list of pairs starting with:</div>
-<br>
-<div><code>insignal</code> : id of the input signal <code>x</code> which is either defined in the <code>signal</code> card or the output signal of another control block and</div>
-<div><code>outsignal</code> : id of the output signal <code>y</code></div>
-<br>
-<div>and followed by <code>N</code> pairs of numerical values <code>x(i)</code> and <code>y(i)</code> to approximate a function <code>y = f(x)</code>. At every time step an output signal <code>y</code> is linearly interpolated for current value of the input signal <code>x</code>.</div>
-<br>
-<!------------------------------------------------------------------------------------------------>
 <div style='background-color:#ccc; border-top:1px solid black; font-size:20px; font-weight:bold'><code>mat</code> : Material</div>
 <code style='white-space:nowrap;'>#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----</code><br>
 <code># Materials</code><br>
