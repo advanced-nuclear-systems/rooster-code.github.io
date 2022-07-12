@@ -60,10 +60,10 @@ The colour code indicates the class to which the card "belongs": <code style='ba
 <div><code>pitch</code> : distance between centers of nodes in plane (m);</div>
 <div><code>botBC</code> : flag of bottom boundary conditions:</div>
    <div style='margin:0 0 0 20px'><code>0</code>: vacuum boundary condition</div>
-   <div style='margin:0 0 0 20px'><code>1</code>: reflective boundary condition</div>
+   <div style='margin:0 0 0 20px'><code>-1</code>: reflective boundary condition</div>
 <div><code>topBC</code> : flag of top boundary conditions:</div>
    <div style='margin:0 0 0 20px'><code>0</code>: vacuum boundary condition</div>
-   <div style='margin:0 0 0 20px'><code>1</code>: reflective boundary condition</div>
+   <div style='margin:0 0 0 20px'><code>-1</code>: reflective boundary condition</div>
 <br>
 <!------------------------------------------------------------------------------------------------>
 <div style='background-color:#fadadd; border-top:1px solid black; font-size:20px; font-weight:bold'><code>coremap</code> : Core map</div>
@@ -427,29 +427,37 @@ The colour code indicates the class to which the card "belongs": <code style='ba
 <code style='white-space:nowrap;'>#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----</code><br>
 <code style='white-space:nowrap;'># Signals</code><br>
 <code style='white-space:nowrap;'>#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----</code><br>
-<pre style='margin:0;'>#####     id        constant</pre>
-<pre style='margin:0;'>signal    PI        3.14159</pre>
-<pre style='margin:0;'>signal    TEMP      600</pre>
-<pre style='margin:0;'>#####     id        keyword</pre>
+<pre style='margin:0;'>#####     id        type      value</pre>
+<pre style='margin:0;'>signal    TSTART    boolean   TIME      le        250</pre>
+<pre style='margin:0;'>signal    TEMP      constant  600</pre>
+<pre style='margin:0;'>signal    DCHAN     dens      CHAN</pre>
+<pre style='margin:0;'>signal    RHO_CRDL  formula   K_CR*(TIN*1.73E-05 + TCRDL*1.70E-05-TVESS*1.70E-05 + TFUEL1*1.30E-05)</pre>
+<pre style='margin:0;'>signal    RHO_CR    lookup    TIME      &</pre>
+<pre style='margin:0;'>          0.0       0.0                 &</pre>
+<pre style='margin:0;'>          0.0       250.0               &</pre>
+<pre style='margin:0;'>          -50.0     252.0               &</pre>
+<pre style='margin:0;'>          -50.0     3000.0</pre>
+<pre style='margin:0;'>signal    LNTF1     function  ln        TFUEL1</pre>
+<pre style='margin:0;'>signal    TCLAD     tclad     FR</pre>
+<pre style='margin:0;'>signal    TCHAN     temp      CHAN</pre>
+<pre style='margin:0;'>signal    TFUEL     tfuel     FR</pre>
 <pre style='margin:0;'>signal    TIME      time</pre>
-<pre style='margin:0;'>#####     id        keyword   comp_id</pre>
-<pre style='margin:0;'>signal    DCHAN1    dens      CHAN1</pre>
-<pre style='margin:0;'>signal    TCHAN1    temp      CHAN1</pre>
-<pre style='margin:0;'>signal    TDGRD     temp      DGRD</pre>
-<pre style='margin:0;'>signal    TFUEL1    tfuel     FR1</pre>
-<pre style='margin:0;'>signal    TCLAD1    tclad     FR1</pre>
 <br>
 <div><code>id</code>: user-defined signal id;</div>
-<div><code>type</code>: signal value.</div>
+<div><code>type</code>: signal type;</div>
+<div><code>value</code>: signal value.</div>
 <br>
-<div>Currently available signals (under development):</div>
+<div>Currently available signal types (under development):</div>
    <div style='margin:0 0 0 20px'>
-   <div><code>3.14159</code>: any constant numeric value;</div>
-   <div><code>time</code>: time of the problem(s);</div>
-   <div><code>dens</code>: average pipe density (kg/m3);</div>
-   <div><code>temp</code>: average pipe or heat structure temperature (K);</div>
-   <div><code>tfuel</code>: fuel rod fuel average temperature (K);</div>
-   <div><code>tclad</code>: fuel rod clad average temperature (K).</div>
+   <div><code>boolean</code>: any constant numeric value; the following logical expression can use signal ID, logical operator (lt, le, eq, ne, gt, ge), constant;</div>
+   <div><code>constant</code>: any constant numeric value;</div>
+   <div><code>dens</code>: average pipe density (kg/m3); <code>CHAN</code>: pipe ID;</div>
+   <div><code>lookup</code>: lookup table; <code>TIME</code>: signal ID (x); <code>N</code> pairs of numerical values <code>x(i)</code> and <code>y(i)</code> to approximate a function <code>y = f(x)</code>. At every time step an output signal <code>y</code> is linearly interpolated for current value of the input signal <code>x</code>.</div>
+   <div><code>formula</code>: expression, including signal IDs, arythmetic operations (+, -, *, /) and parenthesis;</div>
+   <div><code>tclad</code>: fuel rod clad average temperature (K); <code>FR</code>: fuel rod ID;</div>
+   <div><code>temp</code>: average pipe or heat structure temperature (K); <code>CHAN</code>: pipe ID;</div>
+   <div><code>tfuel</code>: fuel rod fuel average temperature (K); <code>FR</code>: fuel rod ID;</div>
+   <div><code>time</code>: time of the problem (s).</div>
 </div>
 <br>
 <!------------------------------------------------------------------------------------------------>
