@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Input Description &mdash; ROOSTER  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=9f0aeb29" />
+
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Control Cards" href="input-control.html" />
+    <link rel="prev" title="Welcome" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            ROOSTER
+              <img src="_static/logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Input Description</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="input-control.html">Control Cards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="input-core.html">Core Cards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="input-fluid.html">Fluid Cards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="input-solid.html">Solid Cards</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="theory.html">Theory manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ROOSTER</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Input Description</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="input-description">
+<h1>Input Description<a class="headerlink" href="#input-description" title="Link to this heading"></a></h1>
+<p>The ROOSTER input file is an ASCII text file consisting of lines (cards) identified by keywords. It should be named <code class="docutils literal notranslate"><span class="pre">input</span></code>.
+The cards are presented in the following sections by examples in alphabetical order of the keywords.
+All numerical values and upper-case words are specified by users.
+The low-case words are keywords and should not be changed. The cards are divided in the following categories:</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="input-control.html">Control Cards</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="input-control.html#comment"><code class="docutils literal notranslate"><span class="pre">#</span></code> : Comment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="input-control.html#line-continuation"><code class="docutils literal notranslate"><span class="pre">&amp;</span></code> : Line continuation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="input-control.html#signal-user-defined-signal"><code class="docutils literal notranslate"><span class="pre">signal</span></code> : User-defined signal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="input-control.html#solve-model-activation-flag"><code class="docutils literal notranslate"><span class="pre">solve</span></code> : Model activation flag</a></li>
+<li class="toctree-l2"><a class="reference internal" href="input-control.html#t0-initial-time"><code class="docutils literal notranslate"><span class="pre">t0</span></code> : Initial time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="input-control.html#tend-integration-time-set"><code class="docutils literal notranslate"><span class="pre">tend</span></code> : Integration time set</a></li>
+<li class="toctree-l2"><a class="reference internal" href="input-control.html#tol-required-solution-tolerance"><code class="docutils literal notranslate"><span class="pre">tol</span></code> : Required solution tolerance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="input-core.html">Core Cards</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="input-core.html#betaeff-effective-fractions-of-delayed-neutrons"><code class="docutils literal notranslate"><span class="pre">betaeff</span></code> : Effective fractions of delayed neutrons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="input-core.html#coregeom-core-geometry"><code class="docutils literal notranslate"><span class="pre">coregeom</span></code> : Core geometry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="input-core.html#coremap-core-map"><code class="docutils literal notranslate"><span class="pre">coremap</span></code> : Core map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="input-core.html#dnplmb-delayed-neutron-precursor-decay-time-constants"><code class="docutils literal notranslate"><span class="pre">dnplmb</span></code> : Delayed neutron precursor decay time constants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="input-core.html#mix-homogeneous-mix-of-isotopes"><code class="docutils literal notranslate"><span class="pre">mix</span></code> : Homogeneous mix of isotopes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="input-core.html#nddir-nuclear-data-directory"><code class="docutils literal notranslate"><span class="pre">nddir</span></code> : Nuclear data directory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="input-core.html#power0-initial-reactor-power"><code class="docutils literal notranslate"><span class="pre">power0</span></code> : Initial reactor power</a></li>
+<li class="toctree-l2"><a class="reference internal" href="input-core.html#stack-vertical-stack-of-homogeneous-mixes"><code class="docutils literal notranslate"><span class="pre">stack</span></code> : Vertical stack of homogeneous mixes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="input-core.html#tlife-prompt-neutron-lifetime"><code class="docutils literal notranslate"><span class="pre">tlife</span></code> : Prompt neutron lifetime</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="input-fluid.html">Fluid Cards</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="input-fluid.html#jun-dependent-junction"><code class="docutils literal notranslate"><span class="pre">jun</span></code> : Dependent junction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="input-fluid.html#jun-i-independent-junction"><code class="docutils literal notranslate"><span class="pre">jun-i</span></code> : Independent junction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="input-fluid.html#jun-i-f-independent-junction-with-user-defined-flowrate"><code class="docutils literal notranslate"><span class="pre">jun-i-f</span></code> : Independent junction with user-defined flowrate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="input-fluid.html#jun-i-p-independent-junction-with-user-defined-pump-head"><code class="docutils literal notranslate"><span class="pre">jun-i-p</span></code> : Independent junction with user-defined pump head</a></li>
+<li class="toctree-l2"><a class="reference internal" href="input-fluid.html#pipe-pipe-without-free-level"><code class="docutils literal notranslate"><span class="pre">pipe</span></code> : Pipe without free level</a></li>
+<li class="toctree-l2"><a class="reference internal" href="input-fluid.html#pipe-f-pipe-with-free-level"><code class="docutils literal notranslate"><span class="pre">pipe-f</span></code> : Pipe with free level</a></li>
+<li class="toctree-l2"><a class="reference internal" href="input-fluid.html#pipe-t-pipe-without-free-level-with-temperature-defined-by-signal"><code class="docutils literal notranslate"><span class="pre">pipe-t</span></code> : Pipe without free level with temperature defined by signal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="input-fluid.html#thermbc-thermal-boundary-conditions"><code class="docutils literal notranslate"><span class="pre">thermbc</span></code> : Thermal boundary conditions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="input-solid.html">Solid Cards</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="input-solid.html#clad-cladding-tube"><code class="docutils literal notranslate"><span class="pre">clad</span></code> : Cladding tube</a></li>
+<li class="toctree-l2"><a class="reference internal" href="input-solid.html#fuel-fuel-column"><code class="docutils literal notranslate"><span class="pre">fuel</span></code> : Fuel column</a></li>
+<li class="toctree-l2"><a class="reference internal" href="input-solid.html#fuelrod-fuel-rod-axial-levels"><code class="docutils literal notranslate"><span class="pre">fuelrod</span></code> : Fuel rod axial levels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="input-solid.html#htstr-heat-structure"><code class="docutils literal notranslate"><span class="pre">htstr</span></code> : Heat structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="input-solid.html#innergas-fuel-rod-inner-gas"><code class="docutils literal notranslate"><span class="pre">innergas</span></code> : Fuel rod inner gas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="input-solid.html#mat-material"><code class="docutils literal notranslate"><span class="pre">mat</span></code> : Material</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="input-control.html" class="btn btn-neutral float-right" title="Control Cards" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023-2024, Konstantin Mikityuk.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

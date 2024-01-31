@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Solid Cards &mdash; ROOSTER  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=9f0aeb29" />
+
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Theory manual" href="theory.html" />
+    <link rel="prev" title="Fluid Cards" href="input-fluid.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            ROOSTER
+              <img src="_static/logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="input.html">Input Description</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="input-control.html">Control Cards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="input-core.html">Core Cards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="input-fluid.html">Fluid Cards</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Solid Cards</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#clad-cladding-tube"><code class="docutils literal notranslate"><span class="pre">clad</span></code> : Cladding tube</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fuel-fuel-column"><code class="docutils literal notranslate"><span class="pre">fuel</span></code> : Fuel column</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fuelrod-fuel-rod-axial-levels"><code class="docutils literal notranslate"><span class="pre">fuelrod</span></code> : Fuel rod axial levels</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#htstr-heat-structure"><code class="docutils literal notranslate"><span class="pre">htstr</span></code> : Heat structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#innergas-fuel-rod-inner-gas"><code class="docutils literal notranslate"><span class="pre">innergas</span></code> : Fuel rod inner gas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mat-material"><code class="docutils literal notranslate"><span class="pre">mat</span></code> : Material</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="theory.html">Theory manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ROOSTER</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="input.html">Input Description</a></li>
+      <li class="breadcrumb-item active">Solid Cards</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="solid-cards">
+<h1>Solid Cards<a class="headerlink" href="#solid-cards" title="Link to this heading"></a></h1>
+<section id="clad-cladding-tube">
+<h2><code class="docutils literal notranslate"><span class="pre">clad</span></code> : Cladding tube<a class="headerlink" href="#clad-cladding-tube" title="Link to this heading"></a></h2>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----
+# Cladding tube
+#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----
+#####     id        matid     ri(m)     ro(m)     nr
+clad      C01       SS1       4.1e-3    4.5e-3    3
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> : user-defined cladding tube id;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">matid</span></code> : user-defined cladding tube material id (should appear in the <code class="docutils literal notranslate"><span class="pre">mat</span></code> card);</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ri</span></code> : inner radius of cladding tube (m);</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ro</span></code> : outer radius of cladding tube (m);</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nr</span></code> : number of radial nodes.</p></li>
+</ul>
+</section>
+<section id="fuel-fuel-column">
+<h2><code class="docutils literal notranslate"><span class="pre">fuel</span></code> : Fuel column<a class="headerlink" href="#fuel-fuel-column" title="Link to this heading"></a></h2>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----
+# Fuel column
+#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----
+#####     id        matid     ri(m)     ro(m)     nr
+fuel      F01       MOX1      1e-3      4e-3      20
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> : user-defined fuel column id;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">matid</span></code> : user-defined fuel column material id  (should appear in the <code class="docutils literal notranslate"><span class="pre">mat</span></code> card);</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ri</span></code> : inner radius of fuel column (m);</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ro</span></code> : outer radius of fuel column (m);</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nr</span></code> : number of radial nodes.</p></li>
+</ul>
+</section>
+<section id="fuelrod-fuel-rod-axial-levels">
+<h2><code class="docutils literal notranslate"><span class="pre">fuelrod</span></code> : Fuel rod axial levels<a class="headerlink" href="#fuelrod-fuel-rod-axial-levels" title="Link to this heading"></a></h2>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----
+# Fuel rod axial levels
+#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----
+#####     id        fuelid    hgap      cladid    p2d       mltpl     pipeid    pipenode  kr        kz
+fuelrod   FR01      F01       0         C01       1.02      10        UP1       2         1.0       1.0
+fuelrod   FR01      F01       0         C01       1.02      10        UP1       3         1.0       1.0
+fuelrod   FR01      F01       0         C01       1.02      10        UP1       4         1.0       1.0
+fuelrod   FR01      F01       0         C01       1.02      10        UP1       5         1.0       1.0
+#
+fuelrod   FR02      F01       1000      C01       1.02      10        UP2       2         1.0       1.0
+fuelrod   FR02      F01       1000      C01       1.02      10        UP2       3         1.0       1.0
+fuelrod   FR02      F01       1000      C01       1.02      10        UP2       4         1.0       1.0
+fuelrod   FR02      F01       1000      C01       1.02      10        UP2       5         1.0       1.0
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> : user-defined id of fuel rod to which the axial layer belongs;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fuelid</span></code> : fuel column id defined in <code class="docutils literal notranslate"><span class="pre">fuel</span></code> card;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hgap</span></code> : fuel-clad gap conductance (W/m<sup>2</sup> K); if zero, the gap conductance is calculated by the code;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cladid</span></code> : clad tube id defined in <code class="docutils literal notranslate"><span class="pre">clad</span></code> card;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">p2d</span></code> : pitch-to-diameter ratio of the fuel rod lattice;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mltpl</span></code> : multiplicity of the heat exchange surface (actual number of fuel rods simulated by one).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pipeid</span></code> : thermal-hydraulic pipe id defined in the <code class="docutils literal notranslate"><span class="pre">pipe</span></code> card;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pipenode</span></code> : index of the node inside the thermal-hydraulic pipe coupled to the current fuel rod level;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kr</span></code> : radial power peaking factor;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kz</span></code> : axial power peaking factor.</p></li>
+</ul>
+</section>
+<section id="htstr-heat-structure">
+<h2><code class="docutils literal notranslate"><span class="pre">htstr</span></code> : Heat structure<a class="headerlink" href="#htstr-heat-structure" title="Link to this heading"></a></h2>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----
+# Heat structure
+#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----
+#####     id        matid     ri(m)     ro(m)     nr        bcleft    bcright   mltpl
+htstr     HS01      SS1       1e-2      1.1e-2    3         BC01      BC02      10
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> :  user-defined id of heat structure to which the axial layer belongs;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">matid</span></code> : user-defined heat structure material id (should appear in the <code class="docutils literal notranslate"><span class="pre">mat</span></code> card);</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ri</span></code> : inner radius of heat structure (m);</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ro</span></code> : outer radius of heat structure (m);</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nr</span></code> : number of radial nodes;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bcleft</span></code> : user-defined boundary condition id for the inner surface of the heat structure (should appear in the <code class="docutils literal notranslate"><span class="pre">thermbc</span></code> card);</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bcright</span></code> : user-defined boundary condition id for the outer surface of the heat structure (should appear in the <code class="docutils literal notranslate"><span class="pre">thermbc</span></code> card);</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mltpl</span></code> : multiplicity of the heat exchange surface (actual number of heat structures simulated by one).</p></li>
+</ul>
+</section>
+<section id="innergas-fuel-rod-inner-gas">
+<h2><code class="docutils literal notranslate"><span class="pre">innergas</span></code> : Fuel rod inner gas<a class="headerlink" href="#innergas-fuel-rod-inner-gas" title="Link to this heading"></a></h2>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----
+# Fuel rod inner gas
+#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----
+#####     fuelrodid matid     plenv(m3)
+innergas  FR01      HE1       53e-6
+innergas  FR02      HE1       53e-6
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">fuelrodid</span></code> : id of fuel rod the inner gas belongs to;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">matid</span></code> : user-defined inner gas material id (should appear in the <code class="docutils literal notranslate"><span class="pre">mat</span></code> card);</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">plenv</span></code> : volume of the gas plenum (m<sup>3</sup>).</p></li>
+</ul>
+</section>
+<section id="mat-material">
+<h2><code class="docutils literal notranslate"><span class="pre">mat</span></code> : Material<a class="headerlink" href="#mat-material" title="Link to this heading"></a></h2>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----
+# Materials
+#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----
+#####     id        type      p0(Pa)    temp0(K)
+mat       NA        na        1e5       673
+#####     id        type      pu(-)     b(MWD/kg) x(-)      por(-)    temp0(K)
+mat       MOX1      mox       0.15      0         0.02      0.05      673
+#####     id        type      temp0(K)
+mat       SS1       ss316     673
+#####     id        type      p0(Pa)    temp0(K)
+mat       HE1       he        1e6       673
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> : user-defined material id;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> : material id</p></li>
+</ul>
+<p>The other values depend on the material <code class="docutils literal notranslate"><span class="pre">type</span></code>. The following materials are available in the coolant properties database:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">he</span></code> : helium as an inner gas material of fuel rods;</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">p0</span></code> : initial pressure (Pa)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">temp0</span></code> : initial temperature (K)</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mox</span></code> : mixed U-Pu oxide as a fuel material of fuel rods;</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pu</span></code> : plutonium content (-)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">b</span></code> : burnup (MWd/kgHM)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">x</span></code> : deviation from stoichiometry (-)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">por</span></code> : porosity (-)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">temp0</span></code> : initial temperature (K)</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">na</span></code> : sodium as a coolant;</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">p0</span></code> : initial pressure (Pa)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">temp0</span></code> : initial temperature (K)</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lbe</span></code> : lead-bismuth eutectic as a coolant;</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">p0</span></code> : initial pressure (Pa)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">temp0</span></code> : initial temperature (K)</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ss316</span></code> : stainless steel 316 as a cladding material of fuel rods;</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">temp0</span></code> : initial temperature (K)</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cu</span></code> : copper as a core of heaters;</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">temp0</span></code> : initial temperature (K)</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bn</span></code> : boron nitride as an insulation material;</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">temp0</span></code> : initial temperature (K)</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="input-fluid.html" class="btn btn-neutral float-left" title="Fluid Cards" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="theory.html" class="btn btn-neutral float-right" title="Theory manual" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023-2024, Konstantin Mikityuk.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
