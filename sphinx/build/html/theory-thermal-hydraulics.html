@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Theory: Thermal Hydraulics &mdash; rooster  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=550ac3dd" />
+
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script>window.MathJax = {"chtml": {"displayAlign": "left"}}</script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Examples" href="examples.html" />
+    <link rel="prev" title="Theory: Neutronics" href="theory-neutronics.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            rooster
+              <img src="_static/logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="input.html">Input Description</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="theory.html">Theory manual</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="theory-neutronics.html">Theory: Neutronics</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Theory: Thermal Hydraulics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#nodalization">Nodalization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#main-equations">Main equations</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#mass-conservation-equation">Mass conservation equation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#momentum-conservation-equation">Momentum conservation equation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#energy-conservation-equation">Energy conservation equation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#algorithm-for-finding-pressure">Algorithm for finding pressure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#time-integration">Time integration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#closure-relations">Closure relations</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">rooster</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="theory.html">Theory manual</a></li>
+      <li class="breadcrumb-item active">Theory: Thermal Hydraulics</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="theory-thermal-hydraulics">
+<h1>Theory: Thermal Hydraulics<a class="headerlink" href="#theory-thermal-hydraulics" title="Link to this heading"></a></h1>
+<section id="nodalization">
+<h2>Nodalization<a class="headerlink" href="#nodalization" title="Link to this heading"></a></h2>
+<p>The thermal-hydraulic model is built from single-node or multi-node 1D pipes connected by junctions. Internal junctions are automatically generated for multi-node pipes. See  <a class="reference internal" href="#fig09bd035a"><span class="std std-ref">Two single-node pipes A and B connected by a junction o</span></a>.</p>
+<figure class="align-center" id="id5">
+<span id="fig09bd035a"></span><a class="reference internal image-reference" href="_images/09bd035a.png"><img alt="_images/09bd035a.png" src="_images/09bd035a.png" style="height: 300px;" /></a>
+<figcaption>
+<p><span class="caption-text">Two single-node pipes <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> connected by a junction <span class="math notranslate nohighlight">\(o\)</span></span><a class="headerlink" href="#id5" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Pipes can be of different types as described in input description:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="input-fluid.html#input-pipe-without-free-level"><span class="std std-ref">pipe : Pipe without free level</span></a></p></li>
+<li><p><a class="reference internal" href="input-fluid.html#input-pipe-with-free-level"><span class="std std-ref">pipe-f : Pipe with free level</span></a> (always single-node)</p></li>
+<li><p><a class="reference internal" href="input-fluid.html#input-pipe-without-free-level-with-temperature-defined-by-signal"><span class="std std-ref">pipe-t : Pipe without free level with temperature defined by signal</span></a> (always single-node)</p></li>
+</ul>
+<p>The simulated circuit should be a closed network of 1D pipes, including at least one single-node pipe with a free surface. The gas pressure above the free surface is a boundary condition for the model. See <a class="reference internal" href="#fig8dfee44a"><span class="std std-ref">Example of the closed network</span></a>.</p>
+<figure class="align-center" id="id6">
+<span id="fig8dfee44a"></span><a class="reference internal image-reference" href="_images/8dfee44a.png"><img alt="_images/8dfee44a.png" src="_images/8dfee44a.png" style="width: 300px;" /></a>
+<figcaption>
+<p><span class="caption-text">Example of the closed network</span><a class="headerlink" href="#id6" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="main-equations">
+<h2>Main equations<a class="headerlink" href="#main-equations" title="Link to this heading"></a></h2>
+<p>A 1D single-phase thermal-hydraulic model of ROOSTER for a non-compressible fluid includes</p>
+<ul class="simple">
+<li><p>liquid sodium and liquid lead equations-of-state;</p></li>
+<li><p>mass conservation equation <a class="reference internal" href="#equation-eq01">(1)</a>;</p></li>
+<li><p>momentum conservation equation <a class="reference internal" href="#equation-eq02">(2)</a>;</p></li>
+<li><p>energy conservation equation <a class="reference internal" href="#equation-eq03">(3)</a>.</p></li>
+</ul>
+<section id="mass-conservation-equation">
+<h3>Mass conservation equation<a class="headerlink" href="#mass-conservation-equation" title="Link to this heading"></a></h3>
+<p>Mass conservation equation is written for every node. See  <a class="reference internal" href="#fig09bd035a"><span class="std std-ref">Two single-node pipes A and B connected by a junction o</span></a>.</p>
+<div class="math notranslate nohighlight" id="equation-eq01">
+<span class="eqno">(1)<a class="headerlink" href="#equation-eq01" title="Link to this equation"></a></span>\[\sum_{in} G_i - \sum_{out} G_o  = 0\]</div>
+<p>where</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><div class="math notranslate nohighlight">
+\[\sum_{in} G_i\]</div>
+</td>
+<td><p>the sum of mass flowrates over the inlet junctions of the node</p></td>
+<td><p>kg/s</p></td>
+</tr>
+<tr class="row-even"><td><div class="math notranslate nohighlight">
+\[\sum_{out} G_o\]</div>
+</td>
+<td><p>the sum of mass flowrates over the outlet junctions of the node</p></td>
+<td><p>kg/s</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="momentum-conservation-equation">
+<h3>Momentum conservation equation<a class="headerlink" href="#momentum-conservation-equation" title="Link to this heading"></a></h3>
+<p>Momentum conservation equation is written for every junction, e.g. junction <span class="math notranslate nohighlight">\(o\)</span>, connecting the nodes <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>. See  <a class="reference internal" href="#fig09bd035a"><span class="std std-ref">Two single-node pipes A and B connected by a junction o</span></a>.</p>
+<div class="math notranslate nohighlight" id="equation-eq02">
+<span class="eqno">(2)<a class="headerlink" href="#equation-eq02" title="Link to this equation"></a></span>\[\left( \frac{L_A}{2A_A} + \frac{L_B}{2A_B} \right) \frac{dG_o}{dt} + P_B - P_A =\]</div>
+<div class="math notranslate nohighlight">
+\[= ( \rho v^2 )_A - ( \rho v^2 )_B + \Delta P_{GRAV} - \Delta P_{FRIC} + \Delta P_{PUMP}\]</div>
+<p>where</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(L_A\)</span> and  <span class="math notranslate nohighlight">\(L_B\)</span></p></td>
+<td><p>the lengths of nodes A and B</p></td>
+<td><p>m</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(A_A\)</span> and  <span class="math notranslate nohighlight">\(A_B\)</span></p></td>
+<td><p>the flow areas of nodes A and B</p></td>
+<td><p>m<sup>2</sup></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(G_o\)</span></p></td>
+<td><p>the flowrate in junction o</p></td>
+<td><p>kg/s</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(P_A\)</span> and  <span class="math notranslate nohighlight">\(P_B\)</span></p></td>
+<td><p>the pressure in nodes A and B</p></td>
+<td><p>Pa</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\({\rho}\)</span></p></td>
+<td><p>the coolant density</p></td>
+<td><p>kg/ m<sup>3</sup></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\({v}\)</span></p></td>
+<td><p>the velocity</p></td>
+<td><p>m/s</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\Delta P_{GRAV} = ( \rho g H/2 )_A + ( \rho g H/2 )_B\)</span></p></td>
+<td><p>gravity head</p></td>
+<td><p>Pa</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(g\)</span></p></td>
+<td><p>the acceleration due to gravity</p></td>
+<td><p>m/s<sup>2</sup></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(H\)</span></p></td>
+<td><p>the elevation of the node</p></td>
+<td><p>m</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\Delta P_{FRIC}\)</span></p></td>
+<td><p>the friction loss</p></td>
+<td><p>Pa</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\Delta P_{PUMP}\)</span></p></td>
+<td><p>the pump head</p></td>
+<td><p>Pa</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="energy-conservation-equation">
+<h3>Energy conservation equation<a class="headerlink" href="#energy-conservation-equation" title="Link to this heading"></a></h3>
+<p>Energy conservation equation is written for every node. See  <a class="reference internal" href="#fig09bd035a"><span class="std std-ref">Two single-node pipes A and B connected by a junction o</span></a>.</p>
+<div class="math notranslate nohighlight" id="equation-eq03">
+<span class="eqno">(3)<a class="headerlink" href="#equation-eq03" title="Link to this equation"></a></span>\[\rho v \frac{dh}{dt} = \sum_{in} G_i h_i - \sum_{out} G_o h_o + q_w A_w\]</div>
+<p>where</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\({\rho}\)</span></p></td>
+<td><p>the coolant density in the node</p></td>
+<td><p>kg/ m<sup>3</sup></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(v\)</span></p></td>
+<td><p>the coolant velocity in the node</p></td>
+<td><p>m/s</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(h\)</span></p></td>
+<td><p>the coolant specific enthalpy in the node</p></td>
+<td><p>J/kg</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(t\)</span></p></td>
+<td><p>the time</p></td>
+<td><p>s</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(G_i\)</span></p></td>
+<td><p>the flowrate in the inlet junction <span class="math notranslate nohighlight">\(i\)</span></p></td>
+<td><p>kg/s</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(h_i\)</span></p></td>
+<td><p>the coolant specific enthalpy in the inlet junction <span class="math notranslate nohighlight">\(i\)</span></p></td>
+<td><p>J/kg</p></td>
+</tr>
+<tr class="row-odd"><td><div class="math notranslate nohighlight">
+\[\sum_{in}\]</div>
+</td>
+<td><p>the sum of mass flowrates over the inlet junctions of the node</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(G_o\)</span></p></td>
+<td><p>the flowrate in the outlet junction <span class="math notranslate nohighlight">\(o\)</span></p></td>
+<td><p>kg/s</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(h_o\)</span></p></td>
+<td><p>the coolant specific enthalpy in the outlet junction <span class="math notranslate nohighlight">\(o\)</span></p></td>
+<td><p>J/kg</p></td>
+</tr>
+<tr class="row-even"><td><div class="math notranslate nohighlight">
+\[\sum_{out}\]</div>
+</td>
+<td><p>the sum of mass flowrates over the outlet junctions of the node</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(q_w\)</span></p></td>
+<td><p>the heat flux from all heat exchange surfaces in the node</p></td>
+<td><p>W/m<sup>2</sup></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(A_w\)</span></p></td>
+<td><p>the area of all heat exchange surfaces in the node</p></td>
+<td><p>m<sup>2</sup></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="algorithm-for-finding-pressure">
+<h2>Algorithm for finding pressure<a class="headerlink" href="#algorithm-for-finding-pressure" title="Link to this heading"></a></h2>
+<p>The algorithm for finding pressure is as follows:</p>
+<ol class="arabic">
+<li><p>A set of linear algebraic equations is built of</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>mass conservation equations <a class="reference internal" href="#equation-eq01">(1)</a> written for every node (except nodes of the pipes with a free surface) and differentiated with respect to time so that left-hand sides are sum of time derivatives of inlet and outlet mass flowrates and right-hand sides are zeros:</p></li>
+</ul>
+<div class="math notranslate nohighlight" id="equation-eq04">
+<span class="eqno">(4)<a class="headerlink" href="#equation-eq04" title="Link to this equation"></a></span>\[\sum_{in} \frac{dG_i}{dt} - \sum_{out} \frac{dG_o}{dt}  = 0\]</div>
+<ul class="simple">
+<li><p>momentum conservation equations for every junction between the nodes so that left-hand sides are time derivatives of mass flowrate in the junctions and differences of the pressures in two nodes connected by the junction, while right-hand sides are gravity heads, friction pressure losses and momentum sources.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>The set of linear algebraic equations is solved with respect to time derivatives of momentum in every junction and pressure values in every node.</p></li>
+</ol>
+</section>
+<section id="time-integration">
+<h2>Time integration<a class="headerlink" href="#time-integration" title="Link to this heading"></a></h2>
+<p>The time derivatives of mass flowrate in junctions and enthalpies in nodes are then integrated using an ODE solver LSODES available from the SciPy library .</p>
+</section>
+<section id="closure-relations">
+<h2>Closure relations<a class="headerlink" href="#closure-relations" title="Link to this heading"></a></h2>
+<p>The closure relations of the model includes</p>
+<ul>
+<li><p>correlations for friction factors</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>the Rehme model for tube bundles <a class="reference internal" href="references.html#rehme1973" id="id1"><span>[Rehme1973]</span></a> and</p></li>
+<li><p>the Churchill model for pipes <a class="reference internal" href="references.html#churchill1977" id="id2"><span>[Churchill1977]</span></a></p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>correlations for heat exchange coefficient</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>the Mikityuk model <a class="reference internal" href="references.html#mikityuk2009" id="id3"><span>[Mikityuk2009]</span></a> for tube bundles and</p></li>
+<li><p>the Subbotin correlation for pipes <a class="reference internal" href="references.html#subbotin1962" id="id4"><span>[Subbotin1962]</span></a>.</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="theory-neutronics.html" class="btn btn-neutral float-left" title="Theory: Neutronics" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="examples.html" class="btn btn-neutral float-right" title="Examples" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Konstantin Mikityuk.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

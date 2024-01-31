@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Core Cards &mdash; rooster  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=550ac3dd" />
+
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Fluid Cards" href="input-fluid.html" />
+    <link rel="prev" title="Control Cards" href="input-control.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            rooster
+              <img src="_static/logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="input.html">Input Description</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="input-control.html">Control Cards</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Core Cards</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#betaeff-effective-fractions-of-delayed-neutrons"><code class="docutils literal notranslate"><span class="pre">betaeff</span></code> : Effective fractions of delayed neutrons</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#coregeom-core-geometry"><code class="docutils literal notranslate"><span class="pre">coregeom</span></code> : Core geometry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#coremap-core-map"><code class="docutils literal notranslate"><span class="pre">coremap</span></code> : Core map</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dnplmb-delayed-neutron-precursor-decay-time-constants"><code class="docutils literal notranslate"><span class="pre">dnplmb</span></code> : Delayed neutron precursor decay time constants</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mix-homogeneous-mix-of-isotopes"><code class="docutils literal notranslate"><span class="pre">mix</span></code> : Homogeneous mix of isotopes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#nddir-nuclear-data-directory"><code class="docutils literal notranslate"><span class="pre">nddir</span></code> : Nuclear data directory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#power0-initial-reactor-power"><code class="docutils literal notranslate"><span class="pre">power0</span></code> : Initial reactor power</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#stack-vertical-stack-of-homogeneous-mixes"><code class="docutils literal notranslate"><span class="pre">stack</span></code> : Vertical stack of homogeneous mixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tlife-prompt-neutron-lifetime"><code class="docutils literal notranslate"><span class="pre">tlife</span></code> : Prompt neutron lifetime</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="input-fluid.html">Fluid Cards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="input-solid.html">Solid Cards</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="theory.html">Theory manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">rooster</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="input.html">Input Description</a></li>
+      <li class="breadcrumb-item active">Core Cards</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="core-cards">
+<h1>Core Cards<a class="headerlink" href="#core-cards" title="Link to this heading"></a></h1>
+<section id="betaeff-effective-fractions-of-delayed-neutrons">
+<h2><code class="docutils literal notranslate"><span class="pre">betaeff</span></code> : Effective fractions of delayed neutrons<a class="headerlink" href="#betaeff-effective-fractions-of-delayed-neutrons" title="Link to this heading"></a></h2>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----
+# Beta-effective in 6 time groups
+#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----
+betaeff   0.000285  0.0015975 0.00141   0.0030525 0.00096   0.000195  # a comment can also be put here
+</pre></div>
+</div>
+<p>Number of values (i.e. number of the time groups) should be the same as in card <code class="docutils literal notranslate"><span class="pre">dnplmb</span></code>.</p>
+</section>
+<section id="coregeom-core-geometry">
+<h2><code class="docutils literal notranslate"><span class="pre">coregeom</span></code> : Core geometry<a class="headerlink" href="#coregeom-core-geometry" title="Link to this heading"></a></h2>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----
+# Core geometry
+#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----
+#####     geometry  pitch(m)  botBC     topBC
+coregeom  hex06     0.18018   0         0
+</pre></div>
+</div>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">geometry</span></code> : flag of core geometry:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">square</span></code> : square geometry;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hex01</span></code> : hexagonal geometry with 1 node per hexagon;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hex06</span></code> : hexagonal geometry with 6 node per hexagon;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hex24</span></code> : hexagonal geometry with 24 node per hexagon.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pitch</span></code> : distance between centers of nodes in plane (m);</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">botBC</span></code> : flag of bottom boundary conditions:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">0</span></code> : vacuum boundary condition</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-1</span></code>: reflective boundary condition</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">topBC</span></code> : flag of top boundary conditions:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">0</span></code> : vacuum boundary condition</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-1</span></code>: reflective boundary condition</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</section>
+<section id="coremap-core-map">
+<h2><code class="docutils literal notranslate"><span class="pre">coremap</span></code> : Core map<a class="headerlink" href="#coremap-core-map" title="Link to this heading"></a></h2>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----
+# Core map
+#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----
+coremap  0     0     0     0     0     0     0     0     0      #1
+coremap     0     0    SHI   SHI   SHI   SHI    0     0     0   #2
+coremap  0     0    SHI   BLA   BLA   BLA   SHI    0     0      #3
+coremap     0    SHI   BLA   FIS   FIS   BLA   SHI    0     0   #4
+coremap  0    SHI   BLA   FIS   FIS   FIS   BLA   SHI    0      #5
+coremap     0    SHI   BLA   FIS   FIS   BLA   SHI    0     0   #6
+coremap  0     0    SHI   BLA   BLA   BLA   SHI    0     0      #7
+coremap     0     0    SHI   SHI   SHI   SHI    0     0     0   #8
+coremap  0     0     0     0     0     0     0     0     0      #9
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">coremap</span></code> card defined one row of assemblies in the core and consists of either boundary condition flag (<code class="docutils literal notranslate"><span class="pre">0</span></code> : vaccuum; <code class="docutils literal notranslate"><span class="pre">1</span></code> : reflective) or of a stack id (should appear in the <code class="docutils literal notranslate"><span class="pre">stack</span></code> card).</p>
+</section>
+<section id="dnplmb-delayed-neutron-precursor-decay-time-constants">
+<h2><code class="docutils literal notranslate"><span class="pre">dnplmb</span></code> : Delayed neutron precursor decay time constants<a class="headerlink" href="#dnplmb-delayed-neutron-precursor-decay-time-constants" title="Link to this heading"></a></h2>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----
+# Delayed neutron precursor decay time constants in 6 time groups (1/s)
+#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----
+dnplmb    0.0127    0.0317    0.115     0.311     1.4       3.87
+</pre></div>
+</div>
+<p>Number of values (i.e. number of the time groups) should be the same as in card <code class="docutils literal notranslate"><span class="pre">betaeff</span></code>.</p>
+</section>
+<section id="mix-homogeneous-mix-of-isotopes">
+<h2><code class="docutils literal notranslate"><span class="pre">mix</span></code> : Homogeneous mix of isotopes<a class="headerlink" href="#mix-homogeneous-mix-of-isotopes" title="Link to this heading"></a></h2>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----
+# Mix: fuel in inner zone
+#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----
+#####     id        isoid     numdens             sigtemp
+mix       INNER     U235j311  3.58838E-05         TEMP
+mix       INNER     U238j311  7.05072E-03         TEMP
+mix       INNER     Pu238j311 6.31883E-06         TEMP
+mix       INNER     Pu239j311 8.71553E-04         TEMP
+mix       INNER     Pu240j311 2.59858E-04         TEMP
+mix       INNER     Pu241j311 6.98635E-05         TEMP
+mix       INNER     Pu242j311 2.42475E-05         TEMP
+mix       INNER     Am241j311 1.70991E-05         TEMP
+mix       INNER     O16j311   1.65043E-02         TEMP
+mix       INNER     C0j311    4.75629E-05         TEMP
+mix       INNER     Si28j311  2.25772E-04         TEMP
+mix       INNER     Si29j311  1.10737E-05         TEMP
+mix       INNER     Si30j311  7.06525E-06         TEMP
+mix       INNER     P31j311   1.10562E-05         TEMP
+mix       INNER     Ti46j311  8.19752E-06         TEMP
+mix       INNER     Ti47j311  7.23535E-06         TEMP
+mix       INNER     Ti48j311  7.02030E-05         TEMP
+mix       INNER     Ti49j311  5.04663E-06         TEMP
+mix       INNER     Ti50j311  4.73566E-06         TEMP
+mix       INNER     Cr50j311  1.58887E-04         TEMP
+mix       INNER     Cr52j311  2.94632E-03         TEMP
+mix       INNER     Cr53j311  3.27778E-04         TEMP
+mix       INNER     Cr54j311  8.00808E-05         TEMP
+mix       INNER     Mn55j311  3.53226E-04         TEMP
+mix       INNER     Fe54j311  8.00560E-04         TEMP
+mix       INNER     Fe56j311  1.21188E-02         TEMP
+mix       INNER     Fe57j311  2.74958E-04         TEMP
+mix       INNER     Fe58j311  3.59615E-05         TEMP
+mix       INNER     Ni58j311  1.87786E-03         TEMP
+mix       INNER     Ni60j311  6.99261E-04         TEMP
+mix       INNER     Ni61j311  2.98974E-05         TEMP
+mix       INNER     Ni62j311  9.37938E-05         TEMP
+mix       INNER     Ni64j311  2.31362E-05         TEMP
+mix       INNER     Mo92j311  4.51168E-05         TEMP
+mix       INNER     Mo94j311  2.78070E-05         TEMP
+mix       INNER     Mo95j311  4.76300E-05         TEMP
+mix       INNER     Mo96j311  4.96037E-05         TEMP
+mix       INNER     Mo97j311  2.82709E-05         TEMP
+mix       INNER     Mo98j311  7.10924E-05         TEMP
+mix       INNER     Mo100j311 2.80498E-05         TEMP
+mix       INNER     Na23j311  7.63797E-03         TEMP
+mix       INNER     He4j311   6.11441E-07         TEMP
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> : user-defined id of the mix;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">isoid</span></code> : id of the isotope; the GENDF file with this name should exist in nulcera data directory <code class="docutils literal notranslate"><span class="pre">nddir</span></code>;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">numdens</span></code> : number density of the isotope <code class="docutils literal notranslate"><span class="pre">isoid</span></code> in the mix <code class="docutils literal notranslate"><span class="pre">id</span></code> (barn<sup>-1</sup> cm<sup>-1</sup>);</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sigtemp</span></code> : signal defining the temperature in K of the isotope <code class="docutils literal notranslate"><span class="pre">isoid</span></code> in the mix <code class="docutils literal notranslate"><span class="pre">id</span></code>.</p></li>
+</ul>
+</section>
+<section id="nddir-nuclear-data-directory">
+<h2><code class="docutils literal notranslate"><span class="pre">nddir</span></code> : Nuclear data directory<a class="headerlink" href="#nddir-nuclear-data-directory" title="Link to this heading"></a></h2>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----
+# Nuclear data directory
+#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----
+nddir     DATA25
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">nddir</span></code> : path to directory containing multigroup cross-section files in GENDF format.</p>
+</section>
+<section id="power0-initial-reactor-power">
+<h2><code class="docutils literal notranslate"><span class="pre">power0</span></code> : Initial reactor power<a class="headerlink" href="#power0-initial-reactor-power" title="Link to this heading"></a></h2>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----
+# Initial reactor power
+#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----
+power0    2990.e6
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">power0</span></code>: initial reactor power (W).</p>
+</section>
+<section id="stack-vertical-stack-of-homogeneous-mixes">
+<h2><code class="docutils literal notranslate"><span class="pre">stack</span></code> : Vertical stack of homogeneous mixes<a class="headerlink" href="#stack-vertical-stack-of-homogeneous-mixes" title="Link to this heading"></a></h2>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----
+# Stack of mixes: fissile subassembly of inner zone
+#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----
+#####     id        mixid     pipeid    pipenode
+stack     FIN       PLUG1     UP01      1
+stack     FIN       GASPLE1   UP02      1
+stack     FIN       GASPLE1   UP02      2
+stack     FIN       GASPLE1   UP02      3
+stack     FIN       GASPLE1   UP02      4
+stack     FIN       GASPLE1   UP02      5
+stack     FIN       GASPLE1   UP02      6
+stack     FIN       GASPLE1   UP02      7
+stack     FIN       GASPLE1   UP02      8
+stack     FIN       GASPLE1   UP03      1
+stack     FIN       GASPLE1   UP04      1
+stack     FIN       SUPPOR1   UP05      1
+stack     FIN       AXBLA     UP06      1
+stack     FIN       AXBLA     UP06      2
+stack     FIN       AXBLA     UP06      3
+stack     FIN       AXBLA     UP06      4
+stack     FIN       AXBLA     UP06      5
+stack     FIN       AXBLA     UP06      6
+stack     FIN       INNER     UP07      1
+stack     FIN       INNER     UP07      2
+stack     FIN       INNER     UP07      3
+stack     FIN       INNER     UP07      4
+stack     FIN       INNER     UP07      5
+stack     FIN       INNER     UP07      6
+stack     FIN       INNER     UP07      7
+stack     FIN       INNER     UP07      8
+stack     FIN       INNER     UP07      9
+stack     FIN       INNER     UP07      10
+stack     FIN       INNER     UP07      11
+stack     FIN       INNER     UP07      12
+stack     FIN       INNER     UP07      13
+stack     FIN       INNER     UP07      14
+stack     FIN       INNER     UP07      15
+stack     FIN       INNER     UP07      16
+stack     FIN       INNER     UP07      17
+stack     FIN       INNER     UP07      18
+stack     FIN       INNER     UP07      19
+stack     FIN       INNER     UP07      20
+stack     FIN       AXBLA     UP08      1
+stack     FIN       AXBLA     UP08      2
+stack     FIN       AXBLA     UP08      4
+stack     FIN       AXBLA     UP08      5
+stack     FIN       AXBLA     UP08      6
+stack     FIN       AXBLA     UP08      3
+stack     FIN       GASPLE1   UP09      1
+stack     FIN       GASPLE1   UP09      2
+stack     FIN       PLUG1     UP10      1
+stack     FIN       EMPTY     UP11      1
+stack     FIN       EMPTY     UP11      2
+stack     FIN       EMPTY     UP11      3
+stack     FIN       OUTLET    UP12      1
+stack     FIN       OUTLET    UP12      2
+stack     FIN       OUTLET    UP12      3
+stack     FIN       OUTLET    UP12      4
+stack     FIN       OUTLET    UP12      5
+stack     FIN       OUTLET    UP12      6
+stack     FIN       OUTLET    UP12      7
+stack     FIN       OUTLET    UP12      8
+stack     FIN       OUTLET    UP12      9
+stack     FIN       OUTLET    UP12      10
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> : user-defined id of the vertical stack of homogeneous mixes;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mixid</span></code> : user-defined id of the homogeneous mix of isotopes filling the node if the stack <code class="docutils literal notranslate"><span class="pre">id</span></code> (should appear in the <code class="docutils literal notranslate"><span class="pre">mix</span></code> card);</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pipeid</span></code> : user-defined id of the pipe (should appear in the <code class="docutils literal notranslate"><span class="pre">pipe</span></code> card);</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pipenode</span></code> : index of the node inside the thermal-hydraulic pipe defining the node of the stack <code class="docutils literal notranslate"><span class="pre">id</span></code>.</p></li>
+</ul>
+<p>Note: the stack represents a subassembly of the core. The axial nodalization of the stack is defined by linking every node of the stack with a pipe node.</p>
+</section>
+<section id="tlife-prompt-neutron-lifetime">
+<h2><code class="docutils literal notranslate"><span class="pre">tlife</span></code> : Prompt neutron lifetime<a class="headerlink" href="#tlife-prompt-neutron-lifetime" title="Link to this heading"></a></h2>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----
+# Prompt neutron lifetime
+#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----
+#####     tlife(s)
+tlife     0.0005
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">tlife</span></code> : prompt neutron lifetime (s).</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="input-control.html" class="btn btn-neutral float-left" title="Control Cards" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="input-fluid.html" class="btn btn-neutral float-right" title="Fluid Cards" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Konstantin Mikityuk.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
