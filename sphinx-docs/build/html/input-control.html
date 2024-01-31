@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Control Cards &mdash; ROOSTER  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=9f0aeb29" />
+
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Core Cards" href="input-core.html" />
+    <link rel="prev" title="Input Description" href="input.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            ROOSTER
+              <img src="_static/logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="input.html">Input Description</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Control Cards</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#comment"><code class="docutils literal notranslate"><span class="pre">#</span></code> : Comment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#line-continuation"><code class="docutils literal notranslate"><span class="pre">&amp;</span></code> : Line continuation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#signal-user-defined-signal"><code class="docutils literal notranslate"><span class="pre">signal</span></code> : User-defined signal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#solve-model-activation-flag"><code class="docutils literal notranslate"><span class="pre">solve</span></code> : Model activation flag</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#t0-initial-time"><code class="docutils literal notranslate"><span class="pre">t0</span></code> : Initial time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tend-integration-time-set"><code class="docutils literal notranslate"><span class="pre">tend</span></code> : Integration time set</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tol-required-solution-tolerance"><code class="docutils literal notranslate"><span class="pre">tol</span></code> : Required solution tolerance</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="input-core.html">Core Cards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="input-fluid.html">Fluid Cards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="input-solid.html">Solid Cards</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="theory.html">Theory manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ROOSTER</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="input.html">Input Description</a></li>
+      <li class="breadcrumb-item active">Control Cards</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="control-cards">
+<h1>Control Cards<a class="headerlink" href="#control-cards" title="Link to this heading"></a></h1>
+<section id="comment">
+<h2><code class="docutils literal notranslate"><span class="pre">#</span></code> : Comment<a class="headerlink" href="#comment" title="Link to this heading"></a></h2>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span># A line started with a hash mark is considered a comment.
+</pre></div>
+</div>
+</section>
+<section id="line-continuation">
+<h2><code class="docutils literal notranslate"><span class="pre">&amp;</span></code> : Line continuation<a class="headerlink" href="#line-continuation" title="Link to this heading"></a></h2>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span># An ampersand symbol at the end of the line &amp;
+is a line continuation symbol.
+</pre></div>
+</div>
+</section>
+<section id="signal-user-defined-signal">
+<h2><code class="docutils literal notranslate"><span class="pre">signal</span></code> : User-defined signal<a class="headerlink" href="#signal-user-defined-signal" title="Link to this heading"></a></h2>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----
+# Signals
+#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----
+#####     id        type      value
+signal    TSTART    boolean   TIME      le        250
+signal    TEMP      constant  600
+signal    DCHAN     dens      CHAN
+signal    RHO_CRDL  formula   K_CR*(TIN*1.73E-05 + TCRDL*1.70E-05-TVESS*1.70E-05 + TFUEL1*1.30E-05)
+signal    RHO_CR    lookup    TIME      &amp;
+          0.0       0.0                 &amp;
+          0.0       250.0               &amp;
+          -50.0     252.0               &amp;
+          -50.0     3000.0
+signal    LNTF1     function  ln        TFUEL1
+signal    TCLAD     tclad     FR
+signal    TCHAN     temp      CHAN
+signal    TFUEL     tfuel     FR
+signal    TIME      time
+
+``id`` : user-defined signal id;
+``type`` : signal type;
+``value`` : signal value.
+</pre></div>
+</div>
+<p>Currently available signal types (under development):</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">boolean</span></code> : any constant numeric value; the following logical expression can use signal ID, logical operator (<code class="docutils literal notranslate"><span class="pre">lt</span></code>, <code class="docutils literal notranslate"><span class="pre">le</span></code>, <code class="docutils literal notranslate"><span class="pre">eq</span></code>, <code class="docutils literal notranslate"><span class="pre">ne</span></code>, <code class="docutils literal notranslate"><span class="pre">gt</span></code>, <code class="docutils literal notranslate"><span class="pre">ge</span></code>), constant;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">constant</span></code> : any constant numeric value;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dens</span></code> : average pipe density (kg/m<sup>3</sup>):</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">CHAN</span></code>: pipe ID;</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">formula</span></code> : expression, including signal IDs, arythmetic operations (<code class="docutils literal notranslate"><span class="pre">+</span></code>, <code class="docutils literal notranslate"><span class="pre">-</span></code>, <code class="docutils literal notranslate"><span class="pre">\*</span></code>, <code class="docutils literal notranslate"><span class="pre">/</span></code>) and parenthesis.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lookup</span></code>: lookup table:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">TIME</span></code>: signal ID (x);</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">N</span></code> pairs of numerical values <code class="docutils literal notranslate"><span class="pre">x(i)</span></code> and <code class="docutils literal notranslate"><span class="pre">y(i)</span></code> to approximate a function <code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">=</span> <span class="pre">f(x)</span></code>. At every time step an output signal <code class="docutils literal notranslate"><span class="pre">y</span></code> is linearly interpolated for current value of the input signal <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tclad</span></code> : fuel rod clad average temperature (K);</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">FR</span></code> : fuel rod ID.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">temp</span></code> : average pipe or heat structure temperature (K);</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">CHAN</span></code>: pipe ID.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tfuel</span></code> : fuel rod fuel average temperature (K);</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">FR</span></code> : fuel rod ID.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">time</span></code> : time of the problem (s).</p></li>
+</ul>
+</section>
+<section id="solve-model-activation-flag">
+<h2><code class="docutils literal notranslate"><span class="pre">solve</span></code> : Model activation flag<a class="headerlink" href="#solve-model-activation-flag" title="Link to this heading"></a></h2>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9----  ----0----
+# Model activation flags&lt;/code
+#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----
+#####     model
+solve     fluid
+#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----
+#####     model
+solve     fuelrod
+#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----
+#####     model
+solve     pointkinetics
+#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----
+#####     model               ng         meth
+solve     spatialkinetics     25         DIF
+</pre></div>
+</div>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">model</span></code> : keyword of the model to be solved:</p>
+<blockquote>
+<div><ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">fluid</span></code> : thermal-hydraulic model;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fuelrod</span></code> : fuel rod behaviour model (<code class="docutils literal notranslate"><span class="pre">fluid</span></code> should be activated);</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pointkinetics</span></code> : point reactor kinetics model;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">spatialkinetics</span></code> : spatial reactor kinetics model;</p>
+<blockquote>
+<div><ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">ng</span></code> : number of energy groups;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">meth</span></code> : method used by an eigenvalue solver:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">DIF</span></code> : neutron diffusion method;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MC</span></code> : Monte Carlo method.</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<p>Note that even if the respective cards are present in the input file, the task will not be solved unless activated by the <code class="docutils literal notranslate"><span class="pre">solve</span></code> card.</p>
+</section>
+<section id="t0-initial-time">
+<h2><code class="docutils literal notranslate"><span class="pre">t0</span></code> : Initial time<a class="headerlink" href="#t0-initial-time" title="Link to this heading"></a></h2>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----&lt;/code&gt;
+# Initial time&lt;/code&gt;
+#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----&lt;/code&gt;
+#####     tinit
+t0        0.0
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">tinit</span></code> : integration starting time (s).</p>
+</section>
+<section id="tend-integration-time-set">
+<h2><code class="docutils literal notranslate"><span class="pre">tend</span></code> : Integration time set<a class="headerlink" href="#tend-integration-time-set" title="Link to this heading"></a></h2>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----&lt;/code&gt;
+# Integration time set&lt;/code&gt;
+#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----&lt;/code&gt;
+#####     tend(s)
+tend      100
+tend      1000
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">tend</span></code> : end of integration time interval (s).</p>
+<p>The given example specifies two integration time intervals: 1) from <code class="docutils literal notranslate"><span class="pre">t0</span></code> to 100 s and 2) from 100 s to 1000 s. The time steps inside the intervals are selected automatically by the ODE solver.</p>
+</section>
+<section id="tol-required-solution-tolerance">
+<h2><code class="docutils literal notranslate"><span class="pre">tol</span></code> : Required solution tolerance<a class="headerlink" href="#tol-required-solution-tolerance" title="Link to this heading"></a></h2>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----
+# Required solution tolerance
+#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----
+#####     rtol      atol
+tol       1e-6      1e-4
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">rtol</span></code> : relative tolerance;
+<code class="docutils literal notranslate"><span class="pre">atol</span></code> : absolute tolerance.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="input.html" class="btn btn-neutral float-left" title="Input Description" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="input-core.html" class="btn btn-neutral float-right" title="Core Cards" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023-2024, Konstantin Mikityuk.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
