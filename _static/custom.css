@@ -1,7 +1,4 @@
-span.eqno {
-    float: right;
-}
-span.eqno a.headerlink {
-    position: relative;
-    z-index: 1;
-}
+span.eqno { float: right; }
+span.eqno a.headerlink { position: relative;  z-index: 1; }
+h2 { color: #800000; }
+h3 { color: #0006b1; }
