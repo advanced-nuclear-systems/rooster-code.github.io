@@ -29,6 +29,7 @@ The code includes
     :hidden:
 
     motivation
+    architecture
     input
     theory
     examples
