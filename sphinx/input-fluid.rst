@@ -1,4 +1,4 @@
-Fluid Cards
+Fluid cards
 ===========
 ``jun`` : Dependent junction
 ----------------------------

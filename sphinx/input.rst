@@ -1,4 +1,4 @@
-Input Description
+Input description
 #################
 The ROOSTER input file is an ASCII text file consisting of lines (cards) identified by keywords. It should be named ``input``. 
 The cards are presented in the following sections by examples in alphabetical order of the keywords. 

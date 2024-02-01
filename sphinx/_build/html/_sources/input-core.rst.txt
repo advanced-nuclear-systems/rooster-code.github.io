@@ -1,4 +1,4 @@
-Core Cards
+Core cards
 ==========
 ``betaeff`` : Effective fractions of delayed neutrons
 -----------------------------------------------------
