@@ -1,4 +1,4 @@
-Control Cards
+Control cards
 =============
 ``#`` : Comment
 ---------------

@@ -1,4 +1,4 @@
-Solid Cards
+Solid cards
 ===========
 ``clad`` : Cladding tube
 ------------------------
