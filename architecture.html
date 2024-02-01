@@ -81,16 +81,21 @@
              
   <section id="architecture">
 <h1>Architecture<a class="headerlink" href="#architecture" title="Link to this heading"></a></h1>
-<p>A constructor of the <a class="reference external" href="https://github.com/rooster-code/rooster/blob/main/B_reactor.py">Reactor</a> class creates instances of four classes:</p>
+<p>A constructor of the <a class="reference external" href="https://github.com/rooster-code/rooster/blob/main/B_reactor.py">Reactor</a> class creates instances of five classes:</p>
 <ul class="simple">
 <li><p>Class <a class="reference external" href="https://github.com/rooster-code/rooster/blob/main/B0_control.py">Control</a> reads input data, evaluates signals using symbolic algebra, provides interfaces between classes and an ODE solver.</p></li>
-<li><p>Class <a class="reference external" href="https://github.com/rooster-code/rooster/blob/main/B1_solid.py">Solid</a> generates a required number of instances of Fuelrod and Heatstructure classes.</p></li>
+<li><p>Class <a class="reference external" href="https://github.com/rooster-code/rooster/blob/main/B1_solid.py">Solid</a> generates a required number of instances of <a class="reference external" href="https://github.com/rooster-code/rooster/blob/main/B1A_heatstructure.py">Heatstructure</a> and <a class="reference external" href="https://github.com/rooster-code/rooster/blob/main/B1B_fuelrod.py">Fuelrod</a> classes.</p></li>
 <li><p>Class <a class="reference external" href="https://github.com/rooster-code/rooster/blob/main/B2_fluid.py">Fluid</a> solves mass, momentum and energy conservation equations for incompressible single phase one-dimensional flow.</p></li>
-<li><p>Class <a class="reference external" href="https://github.com/rooster-code/rooster/blob/main/B3_core.py">Core</a> generates a required number of instances of Isotope and Mix classes and includes the solve_eigenvalue_problem function containing Monte Carlo neutron transport and neutron diffusion solvers.</p></li>
+<li><p>Class <a class="reference external" href="https://github.com/rooster-code/rooster/blob/main/B3_core.py">Core</a> generates a required number of instances of <a class="reference external" href="https://github.com/rooster-code/rooster/blob/main/B3A_isotope.py">Isotope</a> and <a class="reference external" href="https://github.com/rooster-code/rooster/blob/main/B3B_mix.py">Mix</a> classes and includes the solve_eigenvalue_problem function containing Monte Carlo neutron transport and neutron diffusion solvers.</p></li>
+<li><p>Class <a class="reference external" href="https://github.com/rooster-code/rooster/blob/main/B4_data.py">Data</a> calculates material properties, Nusselt numbers and friction factors for Fluid and Solid classes.</p></li>
 </ul>
 <figure class="align-center" id="fig2e041504">
 <a class="reference internal image-reference" href="_images/2e041504.png"><img alt="_images/2e041504.png" src="_images/2e041504.png" style="width: 100%;" /></a>
 </figure>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
 </section>
 
 
