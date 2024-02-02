@@ -4,7 +4,7 @@ ROOSTER (**R**\ obust **O**\ bject-**O**\ riented **S**\ olver of **T**\ ranspor
 
 .. _Figb60d62c0:
 .. figure:: _static/b60d62c0.jpg
-  :height: 300
+  :width: 100%
   :align: center
 
   Generation-IV SFR and LFR [GIF]_
