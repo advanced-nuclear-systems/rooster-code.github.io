@@ -110,7 +110,7 @@ betaeff   0.000285  0.0015975 0.00141   0.0030525 0.00096   0.000195  # a commen
 <p>Number of values (i.e. number of the time groups) should be the same as in card <code class="docutils literal notranslate"><span class="pre">dnplmb</span></code>.</p>
 </section>
 <section id="coregeom-core-geometry">
-<h2><code class="docutils literal notranslate"><span class="pre">coregeom</span></code> : Core geometry<a class="headerlink" href="#coregeom-core-geometry" title="Link to this heading"></a></h2>
+<span id="input-coregeom"></span><h2><code class="docutils literal notranslate"><span class="pre">coregeom</span></code> : Core geometry<a class="headerlink" href="#coregeom-core-geometry" title="Link to this heading"></a></h2>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----
 # Core geometry
 #---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----
@@ -149,7 +149,7 @@ coregeom  hex06     0.18018   0         0
 </ul>
 </section>
 <section id="coremap-core-map">
-<h2><code class="docutils literal notranslate"><span class="pre">coremap</span></code> : Core map<a class="headerlink" href="#coremap-core-map" title="Link to this heading"></a></h2>
+<span id="input-coremap"></span><h2><code class="docutils literal notranslate"><span class="pre">coremap</span></code> : Core map<a class="headerlink" href="#coremap-core-map" title="Link to this heading"></a></h2>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----
 # Core map
 #---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----
@@ -177,7 +177,7 @@ dnplmb    0.0127    0.0317    0.115     0.311     1.4       3.87
 <p>Number of values (i.e. number of the time groups) should be the same as in card <code class="docutils literal notranslate"><span class="pre">betaeff</span></code>.</p>
 </section>
 <section id="mix-homogeneous-mix-of-isotopes">
-<h2><code class="docutils literal notranslate"><span class="pre">mix</span></code> : Homogeneous mix of isotopes<a class="headerlink" href="#mix-homogeneous-mix-of-isotopes" title="Link to this heading"></a></h2>
+<span id="input-mix"></span><h2><code class="docutils literal notranslate"><span class="pre">mix</span></code> : Homogeneous mix of isotopes<a class="headerlink" href="#mix-homogeneous-mix-of-isotopes" title="Link to this heading"></a></h2>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----
 # Mix: fuel in inner zone
 #---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----
@@ -228,13 +228,13 @@ mix       INNER     He4j311   6.11441E-07         TEMP
 </div>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> : user-defined id of the mix;</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">isoid</span></code> : id of the isotope; the GENDF file with this name should exist in nulcera data directory <code class="docutils literal notranslate"><span class="pre">nddir</span></code>;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">isoid</span></code> : id of the isotope; the GENDF file with this name should exist in nuclear data directory <code class="docutils literal notranslate"><span class="pre">nddir</span></code>;</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">numdens</span></code> : number density of the isotope <code class="docutils literal notranslate"><span class="pre">isoid</span></code> in the mix <code class="docutils literal notranslate"><span class="pre">id</span></code> (barn<sup>-1</sup> cm<sup>-1</sup>);</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sigtemp</span></code> : signal defining the temperature in K of the isotope <code class="docutils literal notranslate"><span class="pre">isoid</span></code> in the mix <code class="docutils literal notranslate"><span class="pre">id</span></code>.</p></li>
 </ul>
 </section>
 <section id="nddir-nuclear-data-directory">
-<h2><code class="docutils literal notranslate"><span class="pre">nddir</span></code> : Nuclear data directory<a class="headerlink" href="#nddir-nuclear-data-directory" title="Link to this heading"></a></h2>
+<span id="input-nddir"></span><h2><code class="docutils literal notranslate"><span class="pre">nddir</span></code> : Nuclear data directory<a class="headerlink" href="#nddir-nuclear-data-directory" title="Link to this heading"></a></h2>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----
 # Nuclear data directory
 #---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----
@@ -254,7 +254,7 @@ power0    2990.e6
 <p><code class="docutils literal notranslate"><span class="pre">power0</span></code>: initial reactor power (W).</p>
 </section>
 <section id="stack-vertical-stack-of-homogeneous-mixes">
-<h2><code class="docutils literal notranslate"><span class="pre">stack</span></code> : Vertical stack of homogeneous mixes<a class="headerlink" href="#stack-vertical-stack-of-homogeneous-mixes" title="Link to this heading"></a></h2>
+<span id="input-stack"></span><h2><code class="docutils literal notranslate"><span class="pre">stack</span></code> : Vertical stack of homogeneous mixes<a class="headerlink" href="#stack-vertical-stack-of-homogeneous-mixes" title="Link to this heading"></a></h2>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----
 # Stack of mixes: fissile subassembly of inner zone
 #---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----

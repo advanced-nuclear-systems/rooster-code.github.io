@@ -11,6 +11,8 @@ Core cards
 
 Number of values (i.e. number of the time groups) should be the same as in card ``dnplmb``.
 
+.. _input coregeom:
+
 ``coregeom`` : Core geometry
 ----------------------------
 .. code-block:: text
@@ -37,6 +39,8 @@ Number of values (i.e. number of the time groups) should be the same as in card 
 
     - ``0`` : vacuum boundary condition
     - ``-1``: reflective boundary condition
+
+.. _input coremap:
 
 ``coremap`` : Core map
 ----------------------
@@ -67,6 +71,8 @@ The ``coremap`` card defined one row of assemblies in the core and consists of e
     dnplmb    0.0127    0.0317    0.115     0.311     1.4       3.87
 
 Number of values (i.e. number of the time groups) should be the same as in card ``betaeff``.
+
+.. _input mix:
 
 ``mix`` : Homogeneous mix of isotopes
 -------------------------------------
@@ -120,9 +126,11 @@ Number of values (i.e. number of the time groups) should be the same as in card 
     mix       INNER     He4j311   6.11441E-07         TEMP
 
 * ``id`` : user-defined id of the mix;
-* ``isoid`` : id of the isotope; the GENDF file with this name should exist in nulcera data directory ``nddir``;
+* ``isoid`` : id of the isotope; the GENDF file with this name should exist in nuclear data directory ``nddir``;
 * ``numdens`` : number density of the isotope ``isoid`` in the mix ``id`` (barn\ :sup:`-1` cm\ :sup:`-1`);
 * ``sigtemp`` : signal defining the temperature in K of the isotope ``isoid`` in the mix ``id``.
+
+.. _input nddir:
 
 ``nddir`` : Nuclear data directory
 ----------------------------------
@@ -145,6 +153,8 @@ Number of values (i.e. number of the time groups) should be the same as in card 
     power0    2990.e6
 
 ``power0``: initial reactor power (W).
+
+.. _input stack:
 
 ``stack`` : Vertical stack of homogeneous mixes
 -----------------------------------------------

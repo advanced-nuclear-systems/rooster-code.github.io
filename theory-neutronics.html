@@ -52,7 +52,16 @@
 <li class="toctree-l1"><a class="reference internal" href="architecture.html">Architecture</a></li>
 <li class="toctree-l1"><a class="reference internal" href="input.html">Input description</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="theory.html">Theory manual</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Theory: Neutronics</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Theory: Neutronics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#how-to-prepare-cross-sections">How to prepare cross sections?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-to-build-a-core-model">How to build a core model?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-to-solve-eigenvalue-problem">How to solve eigenvalue problem?</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#monte-carlo-solver">Monte Carlo solver</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#finite-difference-diffusion-solver">Finite-difference diffusion solver</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="theory-thermal-hydraulics.html">Theory: Thermal Hydraulics</a></li>
 </ul>
 </li>
@@ -86,6 +95,52 @@
              
   <section id="theory-neutronics">
 <h1>Theory: Neutronics<a class="headerlink" href="#theory-neutronics" title="Link to this heading"></a></h1>
+<section id="how-to-prepare-cross-sections">
+<h2>How to prepare cross sections?<a class="headerlink" href="#how-to-prepare-cross-sections" title="Link to this heading"></a></h2>
+<p>To prepare the nuclear cross-section input files for ROOSTER follow these steps:</p>
+<ul class="simple">
+<li><p>For each isotope required in your model, download the Point-wise Evaluated Nuclear Data (PENDF) file. You can obtain these files from sources like the <a class="reference external" href="https://www-nds.iaea.org/exfor/endf.htm">IAEA Nuclear Data Services</a>.n</p></li>
+</ul>
+<ul class="simple">
+<li><p>Install the open-source LANL NJOY21 code, which is available at <a class="reference external" href="https://github.com/njoy/NJOY21">NJOY21 GitHub repository</a>.</p></li>
+</ul>
+<ul class="simple">
+<li><p>Utilize NJOY21 to convert the PENDF files into GENDF files for each isotope. Here is an  <a class="reference download internal" download="" href="_downloads/71e89663586909d3159db8d786c6b28f/U238j311.inp"><code class="xref download docutils literal notranslate"><span class="pre">example</span></code></a> of the input file for NJOY21 for the PENDF-to-GENDF conversion of the U-238 nuclear data from the JEFF3.1.1 library.</p></li>
+</ul>
+<ul class="simple">
+<li><p>Move all files in ROOSTER Nuclear Data Directory and specify its name in the input file card <a class="reference internal" href="input-core.html#input-nddir"><span class="std std-ref">nddir : Nuclear data directory</span></a>.</p></li>
+</ul>
+<ul class="simple">
+<li><p>Use the GENDF filenames in the fields <code class="docutils literal notranslate"><span class="pre">isoid</span></code> of the input file card <a class="reference internal" href="input-core.html#input-mix"><span class="std std-ref">mix : Homogeneous mix of isotopes</span></a> to specify homogeneous mix of isotopes.</p></li>
+</ul>
+</section>
+<section id="how-to-build-a-core-model">
+<h2>How to build a core model?<a class="headerlink" href="#how-to-build-a-core-model" title="Link to this heading"></a></h2>
+<p>The calculational area is divided in the nodes, i.e. square or hexagonal prisms with the same dimensions in the (x,y) surface and if necessary different axial heights. The image below shows the <a class="reference internal" href="#fig6d872d52"><span class="std std-ref">Typical nodalisation for 60-deg symmetry sector of fast reactor core model</span></a>. Every node in the (x,y) surface corresponds to a subassembly.
+Every color denotes a homogeneous material.</p>
+<figure class="align-center" id="id1">
+<span id="fig6d872d52"></span><a class="reference internal image-reference" href="_images/6d872d52.png"><img alt="_images/6d872d52.png" src="_images/6d872d52.png" style="width: 100%;" /></a>
+<figcaption>
+<p><span class="caption-text">Typical nodalisation for 60-deg symmetry sector of fast reactor core model</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The core model is build in the following four steps:</p>
+<ul class="simple">
+<li><p>Specify the core geometry, using the input file card <a class="reference internal" href="input-core.html#input-coregeom"><span class="std std-ref">coregeom : Core geometry</span></a>.</p></li>
+<li><p>Specify homogeneous mixes of isotopes as specified in the previous section, using the input file card <a class="reference internal" href="input-core.html#input-mix"><span class="std std-ref">mix : Homogeneous mix of isotopes</span></a>.</p></li>
+<li><p>Create models of subassemblies using the input file cards <a class="reference internal" href="input-core.html#input-stack"><span class="std std-ref">stack : Vertical stack of homogeneous mixes</span></a>.</p></li>
+<li><p>Assemble stacks in the core using  the input file cards <a class="reference internal" href="input-core.html#input-coremap"><span class="std std-ref">coremap : Core map</span></a>.</p></li>
+</ul>
+</section>
+<section id="how-to-solve-eigenvalue-problem">
+<h2>How to solve eigenvalue problem?<a class="headerlink" href="#how-to-solve-eigenvalue-problem" title="Link to this heading"></a></h2>
+<section id="monte-carlo-solver">
+<h3>Monte Carlo solver<a class="headerlink" href="#monte-carlo-solver" title="Link to this heading"></a></h3>
+</section>
+<section id="finite-difference-diffusion-solver">
+<h3>Finite-difference diffusion solver<a class="headerlink" href="#finite-difference-diffusion-solver" title="Link to this heading"></a></h3>
+</section>
+</section>
 </section>
 
 
