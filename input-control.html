@@ -195,7 +195,7 @@ solve     fuelrod
 solve     pointkinetics
 #---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----
 #####     model               ng         meth
-solve     spatialkinetics     25         DIF
+solve     eigenvalueproblem   25         DIF
 </pre></div>
 </div>
 <ul>
@@ -205,7 +205,7 @@ solve     spatialkinetics     25         DIF
 <li><p><code class="docutils literal notranslate"><span class="pre">fluid</span></code> : thermal-hydraulic model;</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">fuelrod</span></code> : fuel rod behaviour model (<code class="docutils literal notranslate"><span class="pre">fluid</span></code> should be activated);</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">pointkinetics</span></code> : point reactor kinetics model;</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">spatialkinetics</span></code> : spatial reactor kinetics model;</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">eigenvalueproblem</span></code> : eigenvalue problem model;</p>
 <blockquote>
 <div><ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">ng</span></code> : number of energy groups;</p></li>

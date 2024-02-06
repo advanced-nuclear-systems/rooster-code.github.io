@@ -81,14 +81,14 @@ Currently available signal types (under development):
     solve     pointkinetics
     #---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----
     #####     model               ng         meth
-    solve     spatialkinetics     25         DIF
+    solve     eigenvalueproblem   25         DIF
 
 * ``model`` : keyword of the model to be solved:
 
     - ``fluid`` : thermal-hydraulic model;
     - ``fuelrod`` : fuel rod behaviour model (``fluid`` should be activated);
     - ``pointkinetics`` : point reactor kinetics model;
-    - ``spatialkinetics`` : spatial reactor kinetics model;
+    - ``eigenvalueproblem`` : eigenvalue problem model;
 
         * ``ng`` : number of energy groups;
         * ``meth`` : method used by an eigenvalue solver:
