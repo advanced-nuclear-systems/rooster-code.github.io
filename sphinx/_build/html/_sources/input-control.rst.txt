@@ -64,6 +64,8 @@ Currently available signal types (under development):
     - ``FR`` : fuel rod ID.
 * ``time`` : time of the problem (s).
 
+.. _input solve:
+
 ``solve`` : Model activation flag
 ---------------------------------
 .. code-block:: text
